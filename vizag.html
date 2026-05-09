@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Vizag Corridor Thesis + South-India Cross-Metro Verdict | Vol. II</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1c2c;
+  --ink-2:#13283d;
+  --ink-soft:#2c3e51;
+  --paper:#f5f1e8;
+  --paper-2:#ede7d8;
+  --rule:#c8c0aa;
+  --gold:#b08a3e;
+  --gold-soft:#c9a961;
+  --crimson:#7a1f1f;
+  --green:#2c5e3f;
+  --amber:#a96a16;
+  --grid:#e2dac4;
+  --teal:#1d4f5b;
+  --teal-soft:#3a7d8c;
+  --muted:#6b6657;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:48px 56px 80px}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;color:var(--ink);font-weight:500;letter-spacing:-0.01em}
+h1{font-size:54px;line-height:1.02;margin:0 0 6px;font-weight:400;font-variation-settings:"opsz" 144,"SOFT" 50}
+h2{font-size:30px;line-height:1.15;margin:0 0 4px;font-weight:500}
+h3{font-size:20px;line-height:1.25;margin:24px 0 8px;font-weight:600}
+h4{font-size:15px;line-height:1.3;margin:14px 0 4px;font-weight:600;letter-spacing:0.02em}
+p{margin:0 0 12px}
+em{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--ink-2)}
+.mono{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted)}
+
+/* COVER */
+.cover{border-top:3px solid var(--ink);padding-top:18px;margin-bottom:38px}
+.cover-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px}
+.cover-meta .left .mono{margin-bottom:6px}
+.cover-meta .right{text-align:right}
+.cover h1{margin-top:8px}
+.cover-sub{font-family:'Fraunces',serif;font-style:italic;font-size:24px;color:var(--ink-soft);margin:6px 0 28px;font-weight:300}
+.cover-classify{display:inline-block;padding:4px 10px;border:1px solid var(--ink);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;background:var(--paper);margin-bottom:10px}
+.byline{display:flex;gap:32px;margin-top:20px;padding-top:18px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted)}
+.byline .stat strong{display:block;color:var(--ink);font-family:'Fraunces',serif;font-size:22px;font-weight:500;line-height:1.1}
+
+/* THESIS BOX */
+.thesis{background:var(--ink);color:var(--paper);padding:34px 38px;margin:32px 0 40px;position:relative;overflow:hidden}
+.thesis::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold)}
+.thesis .mono{color:var(--gold-soft)}
+.thesis h2{color:var(--paper);font-size:28px}
+.thesis p{color:#dfd6bd;max-width:780px;font-size:15.5px;line-height:1.6}
+.thesis .highlight{color:var(--gold-soft);font-weight:600}
+.calls{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:22px}
+.call{border-top:1px solid #38516a;padding-top:12px}
+.call .num{font-family:'Fraunces',serif;font-size:34px;color:var(--gold-soft);line-height:1}
+.call .title{font-weight:700;margin-top:6px;font-size:13px;letter-spacing:0.02em}
+.call .desc{color:#bdb39a;font-size:12.5px;line-height:1.45;margin-top:4px}
+
+/* SECTIONS */
+section{margin:54px 0;page-break-inside:avoid}
+.section-head{display:flex;align-items:baseline;gap:18px;margin-bottom:18px;border-bottom:1.5px solid var(--ink);padding-bottom:10px}
+.section-head .num{font-family:'Fraunces',serif;font-size:40px;color:var(--gold);font-weight:300;line-height:1}
+.section-head h2{flex:1}
+.section-head .tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--muted);text-transform:uppercase}
+
+.lede{font-family:'Fraunces',serif;font-size:20px;line-height:1.4;color:var(--ink-2);font-weight:300;max-width:920px;margin:0 0 24px;font-style:italic}
+
+/* GRID LAYOUTS */
+.two-col{display:grid;grid-template-columns:1.15fr 1fr;gap:40px}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+
+.kpi{border:1px solid var(--rule);background:#faf6e9;padding:18px}
+.kpi .label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;margin-bottom:6px}
+.kpi .val{font-family:'Fraunces',serif;font-size:28px;color:var(--ink);font-weight:500;line-height:1.05}
+.kpi .delta{font-size:12px;color:var(--green);margin-top:4px;font-weight:600}
+.kpi .delta.neg{color:var(--crimson)}
+.kpi .delta.warn{color:var(--amber)}
+.kpi .sub{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.3}
+
+/* TABLES */
+table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:13px}
+th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);font-weight:600;padding:10px 10px;border-bottom:2px solid var(--ink);background:var(--paper-2)}
+td{padding:11px 10px;border-bottom:1px solid var(--grid);vertical-align:top}
+tr:hover td{background:#faf6e9}
+td.mono{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink);text-transform:none;letter-spacing:0}
+.pill{display:inline-block;padding:2px 8px;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600}
+.pill-buy{background:#dde9df;color:var(--green);border:1px solid #b7d1bd}
+.pill-strong{background:var(--green);color:#fff}
+.pill-hold{background:#f1ead2;color:var(--amber);border:1px solid #d8c98e}
+.pill-watch{background:#f3dfdf;color:var(--crimson);border:1px solid #d9a7a7}
+.pill-spec{background:#e7e1ee;color:#553a78;border:1px solid #b9a9d2}
+
+/* CARDS */
+.card{border:1px solid var(--rule);background:#faf6e9;padding:22px}
+.card-dark{background:var(--ink);color:var(--paper);border:none;padding:22px}
+.card-dark h3,.card-dark h4{color:var(--paper)}
+.card-dark .mono{color:var(--gold-soft)}
+
+/* TIER BAR */
+.tier{display:flex;border:1px solid var(--ink);margin:8px 0 18px}
+.tier > div{flex:1;padding:14px 14px;border-right:1px solid var(--ink);position:relative}
+.tier > div:last-child{border-right:none}
+.tier .lbl{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.12em;color:var(--muted);text-transform:uppercase}
+.tier .heading{font-family:'Fraunces',serif;font-size:18px;color:var(--ink);margin:4px 0;font-weight:500}
+.tier .areas{font-size:11.5px;color:var(--ink-soft);line-height:1.4}
+.tier .ret{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);font-weight:600;margin-top:6px}
+
+/* HORIZONTAL BAR CHART (CSS) */
+.bar-chart{margin:8px 0 18px}
+.bar-row{display:grid;grid-template-columns:160px 1fr 80px;gap:12px;align-items:center;padding:6px 0;border-bottom:1px dotted var(--grid)}
+.bar-row .lab{font-size:12px;color:var(--ink)}
+.bar-row .barwrap{height:14px;background:var(--paper-2);position:relative}
+.bar-row .bar{height:100%;background:linear-gradient(90deg,var(--ink) 0%,var(--ink-2) 100%)}
+.bar-row .bar.gold{background:linear-gradient(90deg,var(--gold) 0%,var(--gold-soft) 100%)}
+.bar-row .bar.amb{background:linear-gradient(90deg,var(--amber) 0%,#cd8c30 100%)}
+.bar-row .bar.teal{background:linear-gradient(90deg,var(--teal) 0%,var(--teal-soft) 100%)}
+.bar-row .val{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink);text-align:right;font-weight:600}
+
+/* CALLOUT */
+.callout{border-left:4px solid var(--gold);background:#faf6e9;padding:18px 22px;margin:18px 0;font-family:'Fraunces',serif;font-style:italic;font-size:16px;line-height:1.5;color:var(--ink-2)}
+.callout strong{font-style:normal;color:var(--ink);font-weight:600;font-family:'Manrope',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:6px;color:var(--gold)}
+.callout.teal{border-left-color:var(--teal)}
+.callout.teal strong{color:var(--teal)}
+
+/* QUOTE/CHIP STRIP */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 16px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.06em;padding:3px 8px;border:1px solid var(--rule);background:#fff8e6;color:var(--ink)}
+
+/* HEAD-TO-HEAD */
+.h2h{display:grid;grid-template-columns:1fr 60px 1fr;gap:0;margin:14px 0 22px;border:1px solid var(--ink)}
+.h2h .col{padding:18px 20px}
+.h2h .col.left{background:#ede7d8}
+.h2h .col.right{background:var(--ink);color:var(--paper)}
+.h2h .col.right h4{color:var(--paper)}
+.h2h .vs{display:flex;align-items:center;justify-content:center;background:var(--gold);color:#fff;font-family:'Fraunces',serif;font-size:22px;font-weight:600;border-left:1px solid var(--ink);border-right:1px solid var(--ink)}
+.h2h h4{margin-top:0}
+.h2h ul{margin:6px 0 0;padding:0 0 0 18px;font-size:13px;line-height:1.55}
+.h2h ul li{margin-bottom:4px}
+
+/* VERDICT BADGE */
+.verdict{background:var(--ink);color:var(--paper);padding:30px 36px;margin:24px 0 30px;border-left:6px solid var(--gold)}
+.verdict .mono{color:var(--gold-soft)}
+.verdict h2{color:var(--paper);font-size:32px}
+.verdict p{color:#dfd6bd;font-size:15.5px;line-height:1.6;max-width:820px}
+.verdict .score{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px;padding-top:18px;border-top:1px solid #38516a}
+.verdict .score div .mono{display:block;color:var(--gold-soft);margin-bottom:4px}
+.verdict .score div b{font-family:'Fraunces',serif;font-size:24px;color:var(--paper);font-weight:500;line-height:1.1;display:block}
+.verdict .score div .small{font-size:11.5px;color:#bdb39a;margin-top:4px}
+
+/* FOOTER */
+.footer{border-top:2px solid var(--ink);margin-top:60px;padding-top:18px;font-size:11px;color:var(--muted);line-height:1.5}
+.footer strong{color:var(--ink)}
+.disclaimer{background:#ede7d8;padding:18px 22px;margin-top:18px;border:1px solid var(--rule);font-size:11.5px;line-height:1.5;color:var(--ink-soft)}
+.disclaimer h4{margin-top:0;color:var(--ink);font-size:12px;letter-spacing:0.1em;text-transform:uppercase}
+
+/* ORN */
+.orn{display:flex;align-items:center;gap:14px;margin:32px 0 8px}
+.orn .line{flex:1;height:1px;background:var(--rule)}
+.orn .mark{font-family:'Fraunces',serif;font-style:italic;color:var(--gold);font-size:14px}
+
+.rank{font-family:'Fraunces',serif;font-size:42px;color:var(--gold-soft);line-height:1;font-weight:400}
+
+/* SCORE TABLE special */
+.scoretable td.score-cell{font-family:'JetBrains Mono',monospace;font-weight:700;text-align:center;font-size:14px}
+.score-10{background:#234e2f;color:#fff}
+.score-9{background:#2c5e3f;color:#fff}
+.score-8{background:#3e7351;color:#fff}
+.score-7{background:#669a78;color:#fff}
+.score-6{background:#a3c0ad;color:#1c3525}
+.score-5{background:#dccfa0;color:var(--ink)}
+.score-4{background:#d9b079;color:#fff}
+.score-3{background:#c1844a;color:#fff}
+.score-2{background:#a8623b;color:#fff}
+.score-1{background:#7a1f1f;color:#fff}
+
+@media print{ .wrap{padding:24px} body{font-size:11px} section{page-break-inside:avoid} }
+@media (max-width:900px){
+  .wrap{padding:28px 20px}
+  h1{font-size:36px}
+  .calls{grid-template-columns:repeat(2,1fr)}
+  .two-col,.three-col,.four-col{grid-template-columns:1fr}
+  .tier{flex-direction:column}
+  .tier > div{border-right:none;border-bottom:1px solid var(--ink)}
+  .h2h{grid-template-columns:1fr}
+  .h2h .vs{padding:8px}
+  .verdict .score{grid-template-columns:repeat(2,1fr)}
+  .cover-meta{flex-direction:column;align-items:flex-start}
+  .cover-meta .right{text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="cover-meta">
+    <div class="left">
+      <div class="mono">Strategic Real Assets Research · India</div>
+      <div class="mono">Vol. II &nbsp;·&nbsp; Visakhapatnam Corridor &amp; Cross-Metro Verdict</div>
+    </div>
+    <div class="right">
+      <span class="cover-classify">House View · Restricted Distribution</span>
+      <div class="mono">06 May 2026 &nbsp;·&nbsp; companion to Vol. I (Telangana)</div>
+    </div>
+  </div>
+
+  <h1>The Coastal Bet</h1>
+  <div class="cover-sub">An institutional thesis on Visakhapatnam, the AP industrial corridor, and a head-to-head verdict against Telangana, Mumbai and Bengaluru.</div>
+
+  <div class="byline">
+    <div class="stat"><strong>$15B</strong>Google AI DC, foundation just laid</div>
+    <div class="stat"><strong>₹4,592 Cr</strong>Bhogapuram Airport, opens May 2026</div>
+    <div class="stat"><strong>+30 – 50%</strong>IT-corridor land Δ in 12 months</div>
+    <div class="stat"><strong>800 km</strong>Vizag–Chennai Industrial Corridor</div>
+    <div class="stat"><strong>~136 ac</strong>GMR–Mansas Aviation EduCity</div>
+  </div>
+</div>
+
+<!-- ============ INVESTMENT THESIS ============ -->
+<div class="thesis">
+  <div class="mono">Investment Thesis · TL;DR</div>
+  <h2>A second-cycle airport story, anchored by Asia's largest single AI campus.</h2>
+  <p>Visakhapatnam in 2026 is what Hyderabad was in 2008: a tier-2 coastal city with deep talent, a port, an IT seed cluster, and — within twelve months — a brand-new international airport plus the country's single largest hyperscaler commitment. <span class="highlight">Google's $15 billion, 1 GW AI data centre — foundation laid 28 April 2026 — is being publicly framed as Asia's biggest such facility.</span> Cognizant has broken ground. The Bhogapuram airport is in validation flight phase with a May 2026 commercial opening. The setup mirrors, with high fidelity, the early innings of the Hyderabad cycle. But Vizag is also a thinner, more political, more Naidu-dependent market. We rate Visakhapatnam as a <span class="highlight">tactical asymmetric overlay</span> on a Telangana-anchored core portfolio, not a substitute for it.</p>
+
+  <div class="calls">
+    <div class="call"><div class="num">01</div><div class="title">Bhogapuram Belt</div><div class="desc">Denkada, Tagarapuvalasa, Pusapatirega — pre-airport plot exposure.</div></div>
+    <div class="call"><div class="num">02</div><div class="title">Hyperscaler Halo</div><div class="desc">Madhurawada–Yendada–Rushikonda. Google &amp; Cognizant anchor.</div></div>
+    <div class="call"><div class="num">03</div><div class="title">North Coastal Lifestyle</div><div class="desc">Bheemili Beach Road, Kapuluppada — branded resi at scale.</div></div>
+    <div class="call"><div class="num">04</div><div class="title">VCIC Industrial Nodes</div><div class="desc">Atchutapuram, Anakapalli, Nakkapalli, Rambilli.</div></div>
+    <div class="call"><div class="num">05</div><div class="title">Spillover Districts</div><div class="desc">Vizianagaram, Anakapalli district — pre-merger upside.</div></div>
+  </div>
+</div>
+
+<!-- ============ 01 MARKET CONTEXT ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">01</div>
+    <h2>Vizag · The Catalyst Stack</h2>
+    <div class="tag">Section I &nbsp;·&nbsp; What's actually changing</div>
+  </div>
+
+  <p class="lede">Three independent catalysts are landing in the same eighteen-month window. Individually, each would justify a corridor re-rating. Together, they create the textbook conditions in which land prices step-change rather than drift.</p>
+
+  <div class="four-col" style="margin:18px 0 28px">
+    <div class="kpi">
+      <div class="label">2026 Housing Δ</div>
+      <div class="val">+6 – 10%</div>
+      <div class="delta">Citywide projected</div>
+      <div class="sub">Tier-2 outperforming national avg</div>
+    </div>
+    <div class="kpi">
+      <div class="label">IT-Corridor Land Δ</div>
+      <div class="val">+30 – 50%</div>
+      <div class="delta">Past 12 months</div>
+      <div class="sub">IT Hills · Madhurawada · Rushikonda</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Bhogapuram Airport</div>
+      <div class="val">May 2026</div>
+      <div class="delta">Validation flight done Jan'26</div>
+      <div class="sub">6 → 18 MPPA capacity build-out</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Google AI DC</div>
+      <div class="val">$15B / 1 GW</div>
+      <div class="delta">Foundation 28 Apr 2026</div>
+      <div class="sub">Modi to inaugurate Sep 2028</div>
+    </div>
+  </div>
+
+  <h3>The three engines</h3>
+  <div class="three-col">
+    <div class="card">
+      <h4>1 · The Aviation Anchor</h4>
+      <p>Alluri Sitarama Raju International Airport at Bhogapuram (a GMR Group concession) is being commissioned with a 3,800-m runway and 2,203 acres, with another 500 acres earmarked for allied facilities. The Beach Corridor — a ₹2,800 Cr project — is being revived in parallel, designed to compress city-to-airport travel to 45 minutes. Tata Group, Mansas Trust, and L&amp;T are all already inside the perimeter.</p>
+    </div>
+    <div class="card">
+      <h4>2 · The Hyperscaler Anchor</h4>
+      <p>Google + AdaniConnex's $15B AI data centre is, by stated capacity, the largest single such facility in Asia. Cognizant's Vizag campus broke ground in December 2025. Submarine-cable landing stations make the city's latency profile competitive with Singapore for global cloud workloads. Local CREDAI commentary attributes the 30–50% IT-corridor land jump directly to these announcements.</p>
+    </div>
+    <div class="card">
+      <h4>3 · The Industrial-Corridor Anchor</h4>
+      <p>The Vizag–Chennai Industrial Corridor (VCIC) is the first phase of India's 2,500-km East Coast Economic Corridor, ADB-co-financed at $631M. Two of its four nodes — the 160-ha Rambilli and 441-ha Nakkapalli industrial clusters — sit immediately south of Vizag city. ArcelorMittal Nippon Steel's Anakapalli plant is the first marquee anchor.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>The CM-on-the-stage tell</strong>
+    On 28 April 2026 the AP Chief Minister publicly described the Google AI data centre as "the pride of the North Andhra region" and "Asia's biggest such facility," with Modi expected to inaugurate it in September 2028. When sitting heads of state put their political capital on a corridor, infrastructure delivery and last-mile clearances move faster. The window for buying ahead of those step-changes is now — not after the ribbon cuts.
+  </div>
+</section>
+
+<!-- ============ 02 TIER FRAMEWORK ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">02</div>
+    <h2>Vizag · Five-Tier Geographical Framework</h2>
+    <div class="tag">Section II &nbsp;·&nbsp; Mental map</div>
+  </div>
+
+  <p class="lede">Mirroring our Telangana framework, we segment Vizag's investible map into five tiers. The asymmetry concentrates in Tier III (Bhogapuram corridor) — the analogue of the Future City call — and Tier IV (VCIC industrial nodes), the cleanest pre-cycle land-bank entry available in coastal India today.</p>
+
+  <div class="tier">
+    <div>
+      <div class="lbl">Tier I · Anchored Premium</div>
+      <div class="heading">North-City IT Belt</div>
+      <div class="areas">Madhurawada · Rushikonda · Yendada · MVP Colony · Seethammadhara · Lawson's Bay</div>
+      <div class="ret">Target IRR: 10 – 14%</div>
+    </div>
+    <div>
+      <div class="lbl">Tier II · Active Compounders</div>
+      <div class="heading">North Vizag Frontier</div>
+      <div class="areas">Kommadi · PM Palem · Paradesipalem · Anandapuram · Boyapalem · Kapuluppada</div>
+      <div class="ret">Target IRR: 14 – 18%</div>
+    </div>
+    <div>
+      <div class="lbl">Tier III · Asymmetric Core</div>
+      <div class="heading">Bhogapuram Airport Belt</div>
+      <div class="areas">Bhogapuram · Denkada · Tagarapuvalasa · Pusapatirega · Nellimarla · Bheemili Beach Rd</div>
+      <div class="ret">Target IRR: 20 – 30% (10y)</div>
+    </div>
+    <div>
+      <div class="lbl">Tier IV · Industrial Nodes</div>
+      <div class="heading">VCIC Spine — Vizag South</div>
+      <div class="areas">Atchutapuram · Anakapalli · Nakkapalli · Rambilli · Sabbavaram · Parawada</div>
+      <div class="ret">Target IRR: 15 – 22%</div>
+    </div>
+    <div>
+      <div class="lbl">Tier V · Spillover Districts</div>
+      <div class="heading">Vizianagaram &amp; Beyond</div>
+      <div class="areas">Vizianagaram town · Srikakulam · Pendurthi · Gajuwaka · Duvvada</div>
+      <div class="ret">Target IRR: 12 – 18%</div>
+    </div>
+  </div>
+
+  <h3>Capital allocation framework — Vizag-specific</h3>
+  <table>
+    <thead><tr><th>Archetype</th><th>Tier I</th><th>Tier II</th><th>Tier III</th><th>Tier IV</th><th>Tier V</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>End-user (Vizag-resident)</td><td><b>50%</b></td><td>35%</td><td>10%</td><td>0%</td><td>5%</td><td>Self-occupy in MVP/Madhurawada</td></tr>
+      <tr><td>Income-seeking landlord</td><td>40%</td><td><b>40%</b></td><td>10%</td><td>5%</td><td>5%</td><td>Madhurawada + PM Palem rentals</td></tr>
+      <tr><td>Capital appreciation hunter</td><td>10%</td><td>20%</td><td><b>45%</b></td><td>20%</td><td>5%</td><td>10y horizon, plot-heavy</td></tr>
+      <tr><td>Land-banker / family office</td><td>5%</td><td>15%</td><td><b>40%</b></td><td>30%</td><td>10%</td><td>VMRDA-approved only</td></tr>
+      <tr><td>NRI Telugu-diaspora capital</td><td>30%</td><td>30%</td><td>30%</td><td>5%</td><td>5%</td><td>Branded developers, gated communities</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 03 TIER I ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">03</div>
+    <h2>Tier I · The North-City IT Belt</h2>
+    <div class="tag">Section III &nbsp;·&nbsp; Where the wealth already sits</div>
+  </div>
+
+  <p class="lede">Madhurawada is to Vizag what Madhapur was to Hyderabad in 2010 — already premium, but with another decade of compounding ahead because the city's IT story is genuinely accelerating, not maturing. Tier I in Vizag is unique: less saturated than Hyderabad's Tier I, with materially better lifestyle (coast, weather, density) and rising rather than peaking yields.</p>
+
+  <div class="two-col">
+    <div>
+      <h3>Sub-market view</h3>
+      <p><b>Madhurawada</b> — The IT corridor's centre of gravity. Apartment pricing is approaching ₹7,000/sqft and rising, with VMRDA-approved gated stock the dominant inventory. The Cognizant groundbreaking and the Google AI DC announcement together create a captive 20,000+ high-income tenant pool over a 3–5 year horizon. <em>Best Tier I yield + appreciation combo in coastal South India.</em></p>
+      <p><b>Rushikonda &amp; Yendada</b> — Coastal premium. Yendada has shown some of the city's strongest absolute appreciation as the IT-Hills extension matured. Premium villa demand is structurally underserved.</p>
+      <p><b>MVP Colony &amp; Seethammadhara</b> — Old-money equivalent. Limited supply, high resale liquidity, defensive pricing. Best for capital preservation rather than capital growth.</p>
+      <p><b>Lawson's Bay Colony</b> — Premium ocean-view inventory at scarcity-driven pricing. Niche but durable.</p>
+    </div>
+    <div>
+      <h4 style="margin-top:0">Tier I — apartment ₹/sqft, 2026</h4>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="lab">Madhurawada (premium)</div><div class="barwrap"><div class="bar gold" style="width:80%"></div></div><div class="val">6.5 – 8.5k</div></div>
+        <div class="bar-row"><div class="lab">Madhurawada (standard)</div><div class="barwrap"><div class="bar gold" style="width:65%"></div></div><div class="val">5 – 7k</div></div>
+        <div class="bar-row"><div class="lab">Yendada</div><div class="barwrap"><div class="bar" style="width:70%"></div></div><div class="val">5.5 – 7.5k</div></div>
+        <div class="bar-row"><div class="lab">Rushikonda</div><div class="barwrap"><div class="bar" style="width:75%"></div></div><div class="val">6 – 8k</div></div>
+        <div class="bar-row"><div class="lab">MVP Colony</div><div class="barwrap"><div class="bar" style="width:80%"></div></div><div class="val">7 – 9k</div></div>
+        <div class="bar-row"><div class="lab">Seethammadhara</div><div class="barwrap"><div class="bar" style="width:75%"></div></div><div class="val">6 – 8.5k</div></div>
+        <div class="bar-row"><div class="lab">Beach Road (luxury)</div><div class="barwrap"><div class="bar" style="width:100%"></div></div><div class="val">9 – 14k</div></div>
+      </div>
+
+      <div class="card-dark">
+        <div class="mono">Recommendation</div>
+        <h4 style="margin-top:6px">Overweight Madhurawada apartments</h4>
+        <p style="color:#dfd6bd;font-size:13px">Within Tier I, Madhurawada offers the rare combination of: (a) confirmed near-term tenant demand from Google + Cognizant + existing IT parks, (b) sub-Hyderabad pricing with sub-Hyderabad supply pipeline, and (c) immediate cash-flow yield of 4–5%. This is the cleanest income-plus-appreciation Tier I trade in the southern half of India today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 TIER II ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">04</div>
+    <h2>Tier II · The North Vizag Frontier</h2>
+    <div class="tag">Section IV &nbsp;·&nbsp; Madhurawada's spillover</div>
+  </div>
+
+  <p class="lede">As Madhurawada gets repriced, the Madhurawada–Bhogapuram axis is being filled in by a chain of villages-turning-suburbs. Kommadi, PM Palem, Paradesipalem and Anandapuram are the staging belt — meaningful price gap to Tier I, similar end-state.</p>
+
+  <div class="three-col">
+    <div class="card">
+      <h4>Kommadi · PM Palem</h4>
+      <p>Direct adjacency to Madhurawada with a 30–40% pricing discount. Major schools and hospitals already operating. Paradesipalem and Boyapalem complete the contiguous belt. The Madhurawada-equivalent of these locations 5 years from now.</p>
+      <div class="chips"><span class="chip">VMRDA Layouts</span><span class="chip">Schools In</span><span class="chip">Bus Yes/Metro Tbd</span></div>
+    </div>
+    <div class="card">
+      <h4>Anandapuram</h4>
+      <p>The strategic bridge between the IT corridor and the Bhogapuram airport corridor. Sits on NH-16 and serves as the natural feeder for post-airport employment. Plot-led market with VMRDA approvals; the most predictable Tier II compounder in the city.</p>
+      <div class="chips"><span class="chip">NH-16 Frontage</span><span class="chip">Airport Feeder</span><span class="chip">Strong Title Liquidity</span></div>
+    </div>
+    <div class="card">
+      <h4>Kapuluppada · Boyapalem</h4>
+      <p>Coastal-ish but inland enough for affordability. Land-banking exposure from a low base. 15–20% historical land appreciation; with airport plus IT capex, base rate likely steps up.</p>
+      <div class="chips"><span class="chip">Plot-Heavy</span><span class="chip">5–10y Horizon</span><span class="chip">Lower Liquidity</span></div>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th>Micro-market</th><th>Apt ₹/sqft</th><th>Plot ₹/sq yd</th><th>3y CAGR</th><th>Catalyst</th><th>Rec.</th></tr></thead>
+    <tbody>
+      <tr><td>Kommadi</td><td>4,500 – 6,200</td><td>30,000 – 55,000</td><td>~16%</td><td>Madhurawada spillover</td><td><span class="pill pill-strong">Strong Buy</span></td></tr>
+      <tr><td>PM Palem</td><td>4,500 – 6,500</td><td>30,000 – 55,000</td><td>~15%</td><td>Schools + IT halo</td><td><span class="pill pill-strong">Strong Buy</span></td></tr>
+      <tr><td>Paradesipalem</td><td>4,000 – 5,800</td><td>25,000 – 50,000</td><td>~16%</td><td>Contiguous belt</td><td><span class="pill pill-buy">Buy</span></td></tr>
+      <tr><td>Anandapuram</td><td>3,800 – 5,500</td><td>22,000 – 45,000</td><td>~17%</td><td>Airport feeder</td><td><span class="pill pill-strong">Strong Buy</span></td></tr>
+      <tr><td>Kapuluppada</td><td>3,500 – 5,000</td><td>18,000 – 40,000</td><td>~15%</td><td>Coastal land-bank</td><td><span class="pill pill-buy">Buy</span></td></tr>
+      <tr><td>Boyapalem</td><td>3,200 – 4,800</td><td>15,000 – 35,000</td><td>~14%</td><td>Affordability play</td><td><span class="pill pill-buy">Buy</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 05 TIER III - HEART ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">05</div>
+    <h2>Tier III · The Bhogapuram Airport Belt</h2>
+    <div class="tag">Section V &nbsp;·&nbsp; The asymmetric core call</div>
+  </div>
+
+  <p class="lede">If the Future City core is the headline thesis in Telangana, the Bhogapuram airport belt is its Vizag analogue — at smaller scale, but with delivery certainty <em>this month</em>. Validation flight already complete; commercial opening publicly committed to May 2026. Land within a 10–15 km radius of the terminal is the highest-conviction single trade in coastal South India.</p>
+
+  <div class="callout teal">
+    <strong>The Bhemannapalem anecdote</strong>
+    A Visakhapatnam Rural realtor recently disclosed that an acre quoted at ₹4 crore one month earlier was being asked at ₹6 crore the next. Parcels that had traded at ₹2.5–3 crore an acre were now at ₹5 crore. This is not 18-month CAGR maths — this is single-month repricing in response to specific catalysts (validation flight, Google announcement, Cognizant groundbreaking) landing in close succession. The price velocity in the Bhogapuram belt is now visibly higher than in any other South Indian micro-market we cover.
+  </div>
+
+  <h3>Why we underwrite this as a 4–7× decade play</h3>
+  <div class="four-col" style="margin:14px 0">
+    <div class="kpi">
+      <div class="label">Airport Footprint</div>
+      <div class="val">2,703 ac</div>
+      <div class="sub">2,203 ac airport + 500 ac allied</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Phase 1 Capacity</div>
+      <div class="val">6 MPPA</div>
+      <div class="delta">→ 18 MPPA ultimate</div>
+      <div class="sub">3 phases · ₹4,592 Cr Phase 1</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Beach Corridor</div>
+      <div class="val">₹2,800 Cr</div>
+      <div class="delta">Targets 45-min city → airport</div>
+      <div class="sub">Bridge over Gosthani, elevated stretch</div>
+    </div>
+    <div class="kpi">
+      <div class="label">3-Year Housing Need</div>
+      <div class="val">~20,000</div>
+      <div class="sub">Estimated additional homes around airport</div>
+    </div>
+  </div>
+
+  <h3>Recommended buy-list — Bhogapuram belt</h3>
+  <table>
+    <thead><tr><th>Village / Area</th><th>Plot ₹/sq yd (2026)</th><th>Distance from terminal</th><th>Catalyst-density</th><th>Time horizon</th><th>Rec.</th></tr></thead>
+    <tbody>
+      <tr><td><b>Denkada</b></td><td>14,000 – 22,000</td><td>10 – 15 km</td><td>★★★★★</td><td>3–7y</td><td><span class="pill pill-strong">Strong Buy</span></td></tr>
+      <tr><td><b>Tagarapuvalasa</b></td><td>15,000 – 28,000</td><td>20 – 25 km</td><td>★★★★☆</td><td>3–8y</td><td><span class="pill pill-strong">Strong Buy</span></td></tr>
+      <tr><td><b>Pusapatirega</b></td><td>12,000 – 22,000</td><td>5 – 10 km</td><td>★★★★★</td><td>5–10y</td><td><span class="pill pill-strong">Strong Buy</span></td></tr>
+      <tr><td><b>Nellimarla / Vizianagaram Hwy</b></td><td>10,000 – 20,000</td><td>15 – 25 km</td><td>★★★★☆</td><td>5–10y</td><td><span class="pill pill-buy">Buy</span></td></tr>
+      <tr><td><b>Bhogapuram village</b></td><td>22,000 – 50,000+</td><td>0 – 5 km</td><td>★★★★★</td><td>2–6y</td><td><span class="pill pill-buy">Buy (premium)</span></td></tr>
+      <tr><td><b>Bheemili Beach Road</b></td><td>30,000 – 80,000+</td><td>20 km · coastal</td><td>★★★★☆</td><td>3–7y</td><td><span class="pill pill-buy">Buy (luxury)</span></td></tr>
+      <tr><td><b>Mulakuddu / Kothavalasa</b></td><td>8,000 – 18,000</td><td>20 – 30 km</td><td>★★★☆☆</td><td>7–12y</td><td><span class="pill pill-spec">Speculative Buy</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="card-dark">
+    <div class="mono">House view · highest conviction in vizag</div>
+    <h3 style="color:var(--paper);margin-top:6px">Buy Denkada and Pusapatirega before the ribbon cut</h3>
+    <p style="color:#dfd6bd">Denkada at ₹14,000–22,000/sq yd is the cleanest pre-airport entry available. Pre-airport land prices in Hyderabad's Shamshabad, Bengaluru's Devanahalli, and Mumbai's Navi Mumbai have historically appreciated 3–5× within 5–7 years of operations. Vizag has a thinner buyer pool but also a thinner supply pipeline; we underwrite a 3–4× plot-level outcome on a 7-year horizon as our base case, with a 5–7× bull case if Google's data centre catalyses adjacent industrial migration.</p>
+  </div>
+</section>
+
+<!-- ============ 06 TIER IV ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">06</div>
+    <h2>Tier IV · VCIC Industrial Spine</h2>
+    <div class="tag">Section VI &nbsp;·&nbsp; Vizag's southern arc</div>
+  </div>
+
+  <p class="lede">The Vizag–Chennai Industrial Corridor is the first phase of India's 2,500-km East Coast Economic Corridor. ADB-co-financed, Government-of-AP-executing, with two of its four nodes — Rambilli and Nakkapalli — sitting immediately south of Vizag. ArcelorMittal Nippon Steel's Anakapalli plant is already operational. This is the cleanest pre-cycle industrial-land entry available on India's east coast.</p>
+
+  <div class="two-col">
+    <div>
+      <h3>The four sub-trades</h3>
+      <p><b>Atchutapuram</b> — The current best-yield rental sub-market in greater Vizag (~4.3% reported). SEZ-anchored, with steady industrial-employee demand. Compact apartments here are the single most overlooked yield play in the city.</p>
+
+      <p><b>Anakapalli district</b> — ArcelorMittal Nippon Steel's plant is the marquee anchor, but the broader district benefits from Atchutapuram–Anakapalli road widening (ADB-funded) and is now the spillover beneficiary of Visakhapatnam's saturation. Land prices have moved meaningfully but remain materially below Vizag city.</p>
+
+      <p><b>Nakkapalli &amp; Rambilli (VCIC clusters)</b> — 441-ha and 160-ha cluster footprints with internal infrastructure development funded; target industries include pharma, transport equipment, electronics/IT, and textiles. Pre-occupancy land within 3–5 km of the cluster gates is the asymmetric Tier IV trade.</p>
+
+      <p><b>Sabbavaram &amp; Parawada</b> — Fringe industrial, pharma-adjacency. Lower base, lower liquidity, but suitable for diversified industrial-land basket exposure.</p>
+    </div>
+    <div>
+      <h4 style="margin-top:0">VCIC nodes — relative attractiveness</h4>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="lab">Anakapalli (ArcelorMittal)</div><div class="barwrap"><div class="bar teal" style="width:92%"></div></div><div class="val">★★★★★</div></div>
+        <div class="bar-row"><div class="lab">Atchutapuram</div><div class="barwrap"><div class="bar teal" style="width:85%"></div></div><div class="val">★★★★☆</div></div>
+        <div class="bar-row"><div class="lab">Nakkapalli (441 ha)</div><div class="barwrap"><div class="bar teal" style="width:80%"></div></div><div class="val">★★★★☆</div></div>
+        <div class="bar-row"><div class="lab">Rambilli (160 ha)</div><div class="barwrap"><div class="bar teal" style="width:72%"></div></div><div class="val">★★★☆☆</div></div>
+        <div class="bar-row"><div class="lab">Sabbavaram</div><div class="barwrap"><div class="bar amb" style="width:60%"></div></div><div class="val">★★★☆☆</div></div>
+        <div class="bar-row"><div class="lab">Parawada</div><div class="barwrap"><div class="bar amb" style="width:58%"></div></div><div class="val">★★☆☆☆</div></div>
+      </div>
+
+      <h4>Tier IV typical entry-tickets</h4>
+      <table style="margin-top:8px">
+        <tbody>
+          <tr><td>Industrial land (clean title)</td><td class="mono">₹15 – 60 L/ac</td></tr>
+          <tr><td>Apartment (Atchutapuram)</td><td class="mono">₹35 – 65 L</td></tr>
+          <tr><td>Anakapalli town plot</td><td class="mono">₹6,000 – 18,000/sq yd</td></tr>
+          <tr><td>VCIC fringe land (raw)</td><td class="mono">₹8 – 30 L/ac</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 TOP VIZAG PICKS ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">07</div>
+    <h2>Top-10 Vizag Conviction Picks</h2>
+    <div class="tag">Section VII &nbsp;·&nbsp; Synthesis</div>
+  </div>
+
+  <table>
+    <thead><tr><th>Rank</th><th>Location</th><th>Tier</th><th>Asset Type</th><th>Entry ₹</th><th>10y IRR (base)</th><th>10y IRR (bull)</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td><span class="rank">01</span></td><td><b>Denkada</b><div class="mono">Bhogapuram airport belt</div></td><td>III</td><td>VMRDA plot, 200–500 sq yd</td><td>₹15–35 L</td><td>22%</td><td>32%</td><td>Medium-High</td></tr>
+      <tr><td><span class="rank">02</span></td><td><b>Pusapatirega</b><div class="mono">Airport-frontage</div></td><td>III</td><td>Plot, near terminal</td><td>₹15–40 L</td><td>20%</td><td>30%</td><td>Medium-High</td></tr>
+      <tr><td><span class="rank">03</span></td><td><b>Madhurawada</b><div class="mono">IT corridor core</div></td><td>I</td><td>2–3 BHK apartment</td><td>₹55 L–1.3 Cr</td><td>14%</td><td>18%</td><td>Low</td></tr>
+      <tr><td><span class="rank">04</span></td><td><b>Anandapuram</b><div class="mono">Airport feeder</div></td><td>II</td><td>Plot &amp; gated villa</td><td>₹25–60 L</td><td>16%</td><td>22%</td><td>Medium</td></tr>
+      <tr><td><span class="rank">05</span></td><td><b>Kommadi / PM Palem</b><div class="mono">Madhurawada spillover</div></td><td>II</td><td>Apartment / plot</td><td>₹40–90 L</td><td>15%</td><td>20%</td><td>Low-Medium</td></tr>
+      <tr><td><span class="rank">06</span></td><td><b>Anakapalli (VCIC)</b><div class="mono">ArcelorMittal anchor</div></td><td>IV</td><td>Industrial / agri-conv land</td><td>₹15–50 L/ac</td><td>17%</td><td>24%</td><td>Medium-High</td></tr>
+      <tr><td><span class="rank">07</span></td><td><b>Atchutapuram</b><div class="mono">SEZ rental belt</div></td><td>IV</td><td>Apartment (yield)</td><td>₹35–70 L</td><td>13%</td><td>17%</td><td>Medium</td></tr>
+      <tr><td><span class="rank">08</span></td><td><b>Yendada</b><div class="mono">Coastal premium</div></td><td>I</td><td>Apartment / villa</td><td>₹70 L–2 Cr</td><td>13%</td><td>17%</td><td>Low</td></tr>
+      <tr><td><span class="rank">09</span></td><td><b>Bheemili Beach Road</b><div class="mono">Luxury coastal</div></td><td>III</td><td>Beachfront villa / plot</td><td>₹1–4 Cr</td><td>14%</td><td>20%</td><td>Medium</td></tr>
+      <tr><td><span class="rank">10</span></td><td><b>Tagarapuvalasa</b><div class="mono">Vizianagaram halo</div></td><td>III</td><td>Plot, transit-corridor</td><td>₹15–40 L</td><td>17%</td><td>25%</td><td>Medium-High</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 08 RISK ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">08</div>
+    <h2>Vizag-Specific Risks</h2>
+    <div class="tag">Section VIII &nbsp;·&nbsp; What's different from Telangana</div>
+  </div>
+
+  <p class="lede">The Vizag thesis comes with a fundamentally different risk profile from Hyderabad. Three risk vectors are uniquely material.</p>
+
+  <table>
+    <thead><tr><th>Risk</th><th>Why Vizag-specific</th><th>Probability</th><th>Severity</th><th>Mitigant</th></tr></thead>
+    <tbody>
+      <tr><td><b>Capital-politics whiplash</b></td><td>The Bill recognising Amaravati as sole capital (effective June 2024) was passed in 2026 — Vizag is no longer in the running for "executive capital." Status quo for now, but precedent shows a reversal under any successor government.</td><td>Material on 10y horizon</td><td>Medium</td><td>Underwrite Vizag thesis on private-sector anchors (Google, Cognizant, GMR, ArcelorMittal), not on government-relocation upside</td></tr>
+      <tr><td><b>Single-CM dependency</b></td><td>The current TDP-led catalyst stack — Google, Cognizant, Bhogapuram acceleration — is unusually reliant on the personal political capital of Naidu. Succession to Lokesh is being managed but unproven at scale.</td><td>Moderate</td><td>Medium-High</td><td>Diversify across delivery-certain assets (Bhogapuram, Cognizant, ArcelorMittal already operational/funded) vs. announced-only items</td></tr>
+      <tr><td><b>Talent-base depth</b></td><td>Hyderabad has 1,500+ IT firms and full hyperscaler campuses. Vizag has a Cognizant presence + an under-construction Google DC + a small SEZ. Tenant pool is much thinner — apartments may face longer vacancy cycles in down years.</td><td>Material</td><td>Medium</td><td>Apartment exposure only in Madhurawada or directly metro-feeder areas; plot-led elsewhere</td></tr>
+      <tr><td><b>Airport-feeder road delivery</b></td><td>Bhogapuram is 50–60 km from the city; the 45-min Beach Corridor is funded but not delivered. Until it lands, the airport's catalytic effect is partially dampened.</td><td>Moderate</td><td>Medium</td><td>Buy land closer to NH-16 frontage rather than purely "airport-distance" plots</td></tr>
+      <tr><td><b>Tropical exposure</b></td><td>Vizag is on the cyclone-vulnerable east coast. Hudhud (2014) caused multi-week disruption. Insurance and structural standards matter more here than inland.</td><td>Moderate (annual)</td><td>Low (financial)</td><td>Cyclone-rated construction; avoid &lt;1 km coastline in primary residences</td></tr>
+      <tr><td><b>VMRDA / RERA enforcement</b></td><td>AP's regulatory enforcement, while improving, lags Telangana's. Title disputes and unapproved layouts represent a higher base-rate risk than HMDA/DTCP areas.</td><td>Material</td><td>High (concentrated)</td><td>VMRDA-approved layouts with bank-loan eligibility only; no exceptions</td></tr>
+      <tr><td><b>Liquidity</b></td><td>Vizag has a meaningfully thinner secondary market than Hyderabad, especially for plots above ₹1 Cr. Resale can take 12–24 months in down cycles.</td><td>Material</td><td>Medium</td><td>Plot sizes 200–500 sq yd (most liquid band); avoid large parcels in remote villages</td></tr>
+      <tr><td><b>Pre-airport price overshoot</b></td><td>Some Bhogapuram-belt parcels are already pricing in Phase 2/3 capacity that won't land for 7–10 years.</td><td>Moderate</td><td>Medium</td><td>Pay only on Phase 1 economics; do not extrapolate Hyderabad/Bengaluru airport multiples blindly</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 09 HEAD-TO-HEAD: TELANGANA vs AP ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">09</div>
+    <h2>The Verdict · Telangana vs Andhra Pradesh</h2>
+    <div class="tag">Section IX &nbsp;·&nbsp; Head-to-head</div>
+  </div>
+
+  <p class="lede">Both states are running variants of the same playbook — anchor-tenant capex, government-backed mega-footprint, infrastructure-led corridor creation. But the depth, diversification, and political-risk profile differ substantially. Below is our parameter-by-parameter scorecard.</p>
+
+  <div class="h2h">
+    <div class="col left">
+      <h4>Telangana / Hyderabad &amp; Warangal</h4>
+      <ul>
+        <li>1,500+ IT firms operational; AWS, Microsoft, Google, Meta with major campuses</li>
+        <li>$24.5B+ confirmed hyperscaler capex pipeline (delivered + committed)</li>
+        <li>Two airports in the system (RGIA operational; Mamnoor reviving)</li>
+        <li>Larger, deeper secondary market; institutional Grade-A office pipeline</li>
+        <li>Future City: 1.8 lakh-acre FCDA jurisdiction, 30,000-acre core</li>
+        <li>Stable bipartisan policy continuity since 2014 bifurcation</li>
+        <li>Higher absolute pricing — entry tickets larger</li>
+        <li>RRR + Metro II + H-CITI: connectivity already in delivery</li>
+      </ul>
+    </div>
+    <div class="vs">VS</div>
+    <div class="col right">
+      <h4>Andhra Pradesh / Vizag &amp; VCIC</h4>
+      <ul>
+        <li>Cognizant + Google + AdaniConnex; ArcelorMittal Nippon Steel</li>
+        <li>$15B+ Google AI DC alone — single-largest such facility in Asia</li>
+        <li>Bhogapuram airport opening May 2026 — first international airport for the city</li>
+        <li>Thinner market, lower liquidity, smaller secondary pool</li>
+        <li>VCIC: 800 km coastal industrial corridor, ADB-financed</li>
+        <li>Capital-politics fragility (Amaravati Bill 2026, Vizag de-emphasised)</li>
+        <li>Lower absolute pricing — bigger nominal upside per rupee</li>
+        <li>Coastal lifestyle premium uniquely available</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Parameter-by-parameter scorecard (1 = weak, 10 = strong)</h3>
+  <table class="scoretable">
+    <thead><tr><th>Parameter</th><th>Telangana</th><th>Andhra Pradesh</th><th>Edge</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Hyperscaler / GCC anchor capex</td><td class="score-cell score-9">9</td><td class="score-cell score-7">7</td><td>Telangana</td><td>HYD has 4–5 hyperscalers; AP has Google as the anchor</td></tr>
+      <tr><td>Government-led mega-footprint</td><td class="score-cell score-10">10</td><td class="score-cell score-7">7</td><td>Telangana</td><td>Future City scale &gt; VCIC nodes</td></tr>
+      <tr><td>Airport infrastructure</td><td class="score-cell score-8">8</td><td class="score-cell score-7">7</td><td>Telangana</td><td>RGIA mature + Mamnoor reviving vs Bhogapuram opening</td></tr>
+      <tr><td>Connectivity (metro/ring)</td><td class="score-cell score-9">9</td><td class="score-cell score-5">5</td><td>Telangana</td><td>Metro II + RRR + H-CITI vs Vizag light-metro proposed</td></tr>
+      <tr><td>Talent pool depth</td><td class="score-cell score-9">9</td><td class="score-cell score-6">6</td><td>Telangana</td><td>HYD has decade head-start in IT workforce</td></tr>
+      <tr><td>Secondary-market liquidity</td><td class="score-cell score-9">9</td><td class="score-cell score-6">6</td><td>Telangana</td><td>Plot &amp; apt resale much faster in HYD</td></tr>
+      <tr><td>Regulatory enforcement (RERA/Title)</td><td class="score-cell score-8">8</td><td class="score-cell score-6">6</td><td>Telangana</td><td>HMDA/DTCP/Bhu Bharati more mature than VMRDA</td></tr>
+      <tr><td>Political &amp; policy stability</td><td class="score-cell score-7">7</td><td class="score-cell score-5">5</td><td>Telangana</td><td>AP capital question reopened in 2026</td></tr>
+      <tr><td>Affordability / entry-ticket</td><td class="score-cell score-6">6</td><td class="score-cell score-9">9</td><td>AP</td><td>Vizag still 30–50% cheaper at comparable specs</td></tr>
+      <tr><td>Asymmetric upside (best case)</td><td class="score-cell score-8">8</td><td class="score-cell score-9">9</td><td>AP</td><td>Bhogapuram belt has higher %-upside off lower base</td></tr>
+      <tr><td>Lifestyle / amenity</td><td class="score-cell score-7">7</td><td class="score-cell score-9">9</td><td>AP</td><td>Coast, weather, density advantage to Vizag</td></tr>
+      <tr><td>Diversification (multi-corridor)</td><td class="score-cell score-9">9</td><td class="score-cell score-6">6</td><td>Telangana</td><td>HYD has 5 corridors + Warangal; Vizag is a single-city story</td></tr>
+      <tr><td>Construction / supply pipeline</td><td class="score-cell score-9">9</td><td class="score-cell score-6">6</td><td>Telangana</td><td>HYD branded developer pipeline materially deeper</td></tr>
+      <tr><td><b>COMPOSITE SCORE</b></td><td class="score-cell score-9"><b>108 / 130</b></td><td class="score-cell score-7"><b>89 / 130</b></td><td><b>Telangana</b></td><td>83% vs 68%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="verdict">
+    <div class="mono">House view · Final verdict</div>
+    <h2>Telangana for the core. Vizag for the asymmetric overlay.</h2>
+    <p>For risk-adjusted, decade-long compounding, Telangana wins on every parameter that institutional capital actually underwrites: depth of tenant pool, regulatory enforcement, secondary-market liquidity, diversification across corridors, and political continuity. Vizag wins on entry-ticket, asymmetric percentage upside, and lifestyle. The right answer for a serious allocator is not either-or — it is a <span style="color:var(--gold-soft);font-weight:600">~70% Telangana / 30% Vizag</span> split, weighted toward Telangana's Tier III (Future City core) and Vizag's Tier III (Bhogapuram belt) for the asymmetric component, with Tier I/II in both for stability.</p>
+    <div class="score">
+      <div><span class="mono">Conservative end-user</span><b>85% TG · 15% AP</b><span class="small">Self-occupy Tellapur or MVP/Madhurawada</span></div>
+      <div><span class="mono">Income landlord</span><b>70% TG · 30% AP</b><span class="small">HYD Pocharam + Vizag Madhurawada apartment</span></div>
+      <div><span class="mono">Capital appreciation</span><b>65% TG · 35% AP</b><span class="small">Future City basket + Bhogapuram basket</span></div>
+      <div><span class="mono">Land-banker</span><b>60% TG · 40% AP</b><span class="small">Mucherla/Tukkuguda + Denkada/Pusapatirega</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 CROSS METRO COMPARISON ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">10</div>
+    <h2>Cross-Metro Comparison · Hyderabad · Vizag · Mumbai · Bengaluru</h2>
+    <div class="tag">Section X &nbsp;·&nbsp; Where Telugu states sit nationally</div>
+  </div>
+
+  <p class="lede">Stepping out of the Telugu-states frame: how do Hyderabad and Vizag compare against the two indisputable benchmarks of Indian real estate? Mumbai is depth, prestige, and yield-compressed defensiveness. Bengaluru is the closest behavioural cousin to Hyderabad — IT-anchored, plot-led, with the country's deepest residential pipeline. Below is a side-by-side that focuses on what an investor with national mobility actually needs to compare.</p>
+
+  <table class="scoretable">
+    <thead>
+      <tr>
+        <th style="width:28%">Parameter</th>
+        <th>Hyderabad</th>
+        <th>Visakhapatnam</th>
+        <th>Mumbai (MMR)</th>
+        <th>Bengaluru</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Premium apt ₹/sqft (2026)</b></td>
+        <td class="mono">₹9 – 18k (Kokapet)<br>₹12 – 25k (Banjara)</td>
+        <td class="mono">₹6 – 10k (Madhurawada)<br>₹9 – 14k (Beach Rd)</td>
+        <td class="mono">₹25 – 1,20,000+<br>(South Mumbai)</td>
+        <td class="mono">₹9.5 – 14.5k (Sarjapur)<br>₹14 – 25k (Indiranagar)</td>
+      </tr>
+      <tr>
+        <td><b>Mid-segment apt ₹/sqft</b></td>
+        <td class="mono">₹4.8 – 7.2k (Patancheru)</td>
+        <td class="mono">₹3.5 – 5.5k (Kommadi)</td>
+        <td class="mono">₹12 – 20k (Thane)</td>
+        <td class="mono">₹6 – 9k (Electronic City)</td>
+      </tr>
+      <tr>
+        <td><b>3y price CAGR (top corridor)</b></td>
+        <td class="score-cell score-9">~18 – 20%</td>
+        <td class="score-cell score-9">~17 – 20%</td>
+        <td class="score-cell score-6">~9 – 12%</td>
+        <td class="score-cell score-9">~22% (Sarjapur/Whitefield)</td>
+      </tr>
+      <tr>
+        <td><b>1y price Δ (typical)</b></td>
+        <td class="score-cell score-8">~14% YoY</td>
+        <td class="score-cell score-7">~6 – 10% citywide<br>30 – 50% IT-corridor</td>
+        <td class="score-cell score-6">~6 – 8%</td>
+        <td class="score-cell score-9">~15 – 29% (Whitefield)</td>
+      </tr>
+      <tr>
+        <td><b>Rental yield (typical)</b></td>
+        <td class="score-cell score-7">3 – 5%</td>
+        <td class="score-cell score-7">3.5 – 5%</td>
+        <td class="score-cell score-5">2 – 4%</td>
+        <td class="score-cell score-8">3.5 – 4.5%</td>
+      </tr>
+      <tr>
+        <td><b>2 BHK entry ticket (mid-mkt)</b></td>
+        <td class="mono">₹50 L – 1.2 Cr</td>
+        <td class="mono">₹40 – 90 L</td>
+        <td class="mono">₹1.3 – 1.5 Cr+</td>
+        <td class="mono">₹70 L – 1.2 Cr</td>
+      </tr>
+      <tr>
+        <td><b>Hyperscaler / GCC capex</b></td>
+        <td class="score-cell score-10">$24B+ pipeline</td>
+        <td class="score-cell score-8">$15B+ Google alone</td>
+        <td class="score-cell score-7">~$10B (Navi Mumbai)</td>
+        <td class="score-cell score-10">$30B+ pipeline</td>
+      </tr>
+      <tr>
+        <td><b>Landmark airport project</b></td>
+        <td class="score-cell score-7">RGIA mature; Mamnoor reviving</td>
+        <td class="score-cell score-9">Bhogapuram Apr/May 2026</td>
+        <td class="score-cell score-9">Navi Mumbai Intl just opened</td>
+        <td class="score-cell score-7">Kempegowda mature; second proposed</td>
+      </tr>
+      <tr>
+        <td><b>Metro coverage (operational)</b></td>
+        <td class="score-cell score-8">~70 km · Phase II in pipeline</td>
+        <td class="score-cell score-3">Light metro proposed</td>
+        <td class="score-cell score-9">200+ km network</td>
+        <td class="score-cell score-9">~95 km · Phase 3 planned</td>
+      </tr>
+      <tr>
+        <td><b>Pre-cycle land-bank availability</b></td>
+        <td class="score-cell score-9">Future City core</td>
+        <td class="score-cell score-9">Bhogapuram belt</td>
+        <td class="score-cell score-3">Effectively saturated</td>
+        <td class="score-cell score-6">Devanahalli / N. Bengaluru only</td>
+      </tr>
+      <tr>
+        <td><b>Title / regulatory friction</b></td>
+        <td class="score-cell score-8">HMDA/DTCP solid</td>
+        <td class="score-cell score-6">VMRDA improving</td>
+        <td class="score-cell score-7">MahaRERA mature; redevpt complex</td>
+        <td class="score-cell score-6">B-Khata risk in periphery</td>
+      </tr>
+      <tr>
+        <td><b>Liquidity (resale velocity)</b></td>
+        <td class="score-cell score-8">Strong</td>
+        <td class="score-cell score-6">Moderate, thinner</td>
+        <td class="score-cell score-9">Deepest in India</td>
+        <td class="score-cell score-9">Strong</td>
+      </tr>
+      <tr>
+        <td><b>Lifestyle / amenity / climate</b></td>
+        <td class="score-cell score-7">Decent · weather solid</td>
+        <td class="score-cell score-9">Coast · best weather of the four</td>
+        <td class="score-cell score-7">Cultural depth · congested · humid</td>
+        <td class="score-cell score-7">Pleasant climate · congestion drag</td>
+      </tr>
+      <tr>
+        <td><b>Political / policy stability</b></td>
+        <td class="score-cell score-7">Stable since 2014</td>
+        <td class="score-cell score-5">Capital question reopened</td>
+        <td class="score-cell score-7">Stable but bureaucratic</td>
+        <td class="score-cell score-7">Stable (Karnataka coalition risk)</td>
+      </tr>
+      <tr>
+        <td><b>Best risk-adjusted IRR (10y)</b></td>
+        <td class="score-cell score-9">14 – 18%</td>
+        <td class="score-cell score-8">15 – 22% (Tier III)</td>
+        <td class="score-cell score-6">8 – 11%</td>
+        <td class="score-cell score-9">13 – 17%</td>
+      </tr>
+      <tr>
+        <td><b>Asymmetric ("home run") upside</b></td>
+        <td class="score-cell score-9">Future City: 5 – 10×</td>
+        <td class="score-cell score-9">Bhogapuram: 4 – 7×</td>
+        <td class="score-cell score-4">Limited; redevpt only</td>
+        <td class="score-cell score-7">N. Bengaluru: 3 – 5×</td>
+      </tr>
+      <tr style="background:var(--paper-2)">
+        <td><b>Best for…</b></td>
+        <td><b>The institutional core.</b> Diversification + scale.</td>
+        <td><b>The asymmetric overlay.</b> Concentrated airport bet.</td>
+        <td><b>Capital preservation.</b> Prestige + liquidity.</td>
+        <td><b>The IT-yield core.</b> Compounding, reliable.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>What this means for portfolio construction</h3>
+  <div class="three-col">
+    <div class="card">
+      <h4>If you are starting from zero — a national-allocation portfolio</h4>
+      <p><b>40% Telangana</b> — Tier I/II + a basket of 3–4 Tier III plots. The deepest, most diversified compounder.<br><br>
+      <b>20% Bengaluru</b> — Sarjapur Road, Whitefield periphery, Hebbal/airport corridor. Highest 3-year CAGR among the four; operational metro premiums.<br><br>
+      <b>20% Vizag</b> — Bhogapuram-belt plot basket plus a Madhurawada apartment. Asymmetric upside, lower base.<br><br>
+      <b>20% Mumbai</b> — Only if HNI; capital-preservation sleeve via Thane/Powai/Andheri E. Otherwise overweight the other three.</p>
+    </div>
+    <div class="card">
+      <h4>If you already have Hyderabad / Telangana exposure</h4>
+      <p>Your incremental rupee should NOT go back into more Hyderabad plots. The diversification gain is in Vizag (Bhogapuram + Madhurawada) and Bengaluru (Sarjapur/Whitefield). Skip Mumbai unless you specifically want yield-compressed liquidity. Tilt the new money 65/35 between Vizag and Bengaluru — Vizag for asymmetric upside, Bengaluru for income stability.</p>
+    </div>
+    <div class="card">
+      <h4>If your time horizon is &lt; 5 years</h4>
+      <p>Avoid Tier III plot bets in any of the four cities — these are 7–10 year compounders by nature. Stick to ready/near-ready apartments in Tier I/II of Hyderabad (Tellapur, Kokapet) or Bengaluru (Whitefield, Sarjapur), or yield-anchored Mumbai (Powai, Andheri E). Vizag is best avoided at &lt;5y horizons because its catalysts haven't fully landed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 FINAL ============ -->
+<section>
+  <div class="section-head">
+    <div class="num">11</div>
+    <h2>The One-Page Synthesis</h2>
+    <div class="tag">Section XI &nbsp;·&nbsp; If you only read this</div>
+  </div>
+
+  <div class="card-dark" style="padding:30px 36px">
+    <div class="mono">final synthesis · across vol I and vol II</div>
+    <h3 style="color:var(--paper);margin-top:8px">The five things that matter</h3>
+    <ol style="color:#dfd6bd;line-height:1.7;font-size:14.5px;padding-left:20px">
+      <li><b style="color:var(--gold-soft)">The single highest-conviction trade in South India today</b> is a basket of 4–6 HMDA/RERA-approved plots in Telangana's Future City core (Mucherla, Tukkuguda, Kadthal, Maheshwaram) deployed before December 2026 master-plan publication. Underwrite 18–28% IRR over 10 years.</li>
+      <li><b style="color:var(--gold-soft)">The single highest-conviction trade in Andhra Pradesh today</b> is a similar plot basket in the Bhogapuram airport belt (Denkada, Pusapatirega, Tagarapuvalasa) deployed before commercial airport opening in May 2026. Underwrite 20–30% IRR over 10 years, with wider distribution.</li>
+      <li><b style="color:var(--gold-soft)">The cleanest defensive cash-flow trade</b> is a Madhurawada (Vizag) or Pocharam/Tellapur (Hyderabad) Grade-A apartment in a branded developer's project. 4–5% yield rising to 5–6% over 3 years; 12–14% IRR.</li>
+      <li><b style="color:var(--gold-soft)">The smartest cross-state diversification</b> is a 70/30 Telangana/AP split, NOT a 50/50 — reflecting the depth, liquidity, and political-stability advantage of Telangana while still capturing Vizag's asymmetric airport-cycle option.</li>
+      <li><b style="color:var(--gold-soft)">The single most overlooked due-diligence step</b> applies to all four cities: cross-checking the survey number against the relevant master-plan or alignment PDF (HMDA, VMRDA, MahaRERA, BBMP) before any advance payment. This eliminates roughly 80% of land-bank disasters.</li>
+    </ol>
+  </div>
+
+  <div class="callout">
+    <strong>The closing call</strong>
+    The original Hyderabad story compounded silently for a decade before the broader market noticed it. Future City and Bhogapuram are not silent — they are publicly announced, politically backed, contractor-mobilised, and visible from satellite. The window for early-cycle entry is therefore measured in quarters, not years. Capital that waits for the master plan, the ribbon cut, and the post-opening clarity will pay 2–3× for the same exposure. Capital that deploys now into a properly-diversified, properly-DD'd basket will compound through the cycle the way the 2003–2024 Manikonda holders did.
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<div class="orn"><div class="line"></div><div class="mark">— end of report · vol. ii of ii —</div><div class="line"></div></div>
+
+<div class="footer">
+  <strong>Report:</strong> The Coastal Bet · Visakhapatnam Corridor + Cross-Metro Verdict · Vol. II<br>
+  <strong>Date of issue:</strong> 06 May 2026 · <strong>Coverage:</strong> Vizag (5 tiers, 25+ micro-markets) · Cross-comparison with Hyderabad, Mumbai, Bengaluru<br>
+  <strong>Methodology:</strong> Open-source intelligence on GMR/Bhogapuram, NICDC/VCIC, GoAP industrial policy, Google/AdaniConnex MoUs, CREDAI Vizag commentary, AP RERA / VMRDA documents, comparable Mumbai (MahaRERA, MMRDA) and Bengaluru (K-RERA, BBMP) datasets. Companion to Vol. I (Telangana).
+</div>
+
+<div class="disclaimer">
+  <h4>Important Disclaimer</h4>
+  This report is a strategic analytical synthesis prepared for informational and educational purposes. It is not investment advice, legal advice, or a solicitation to transact. Real estate is illiquid, region-specific, and exposed to political, regulatory, environmental, weather, and counterparty risks that cannot be fully captured in any framework. Forward-looking IRR ranges are projections based on current information and assumptions; actual outcomes will diverge — sometimes materially — based on infrastructure execution, alignment changes, capital-region political settlements, hyperscaler capex pacing, and idiosyncratic title or counterparty risk. The author is not a licensed financial or legal advisor. Independent legal due diligence (VMRDA / Bhu Bharati / MahaRERA / K-RERA verification, title chain, encumbrance certificates), independent professional valuation, and local on-ground inspection are non-negotiable prerequisites to any deployment of capital. Past corridor performance (Hyderabad's Manikonda 2003–24, Bengaluru's Whitefield 2010–24) does not guarantee future outcomes in Bhogapuram, Future City, or any other corridor. Allocate only capital you can lock for 5–10 years and whose loss you can absorb.
+</div>
+
+</div>
+</body>
+</html>
