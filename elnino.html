@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Niño 2026–27 · Climate & Agro-Economic Intelligence Report — Global Outlook, India Deep Dive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --abyss:#081320; --deep:#0C1B2E; --slate:#11263E; --panel:#142B46; --panel-2:#17314F;
+    --hair:rgba(214,231,247,.10); --hair-strong:rgba(214,231,247,.20);
+    --paper:#ECF2F8; --mist:#94A9C0; --mist-dim:#6E839B;
+    --monsoon:#54C2D0; --monsoon-deep:#2A7C8C;
+    /* the heat-anomaly scale — the report's signature, reused everywhere as the intensity legend */
+    --c-low:#3F9DA8; --c-mod:#E6B23C; --c-high:#E87B2E; --c-sev:#D8442E; --c-ext:#9C1A12;
+    --tailwind:#5FB98C;
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:
+      radial-gradient(1100px 700px at 78% -8%, rgba(216,68,46,.10), transparent 55%),
+      radial-gradient(900px 600px at 8% 4%, rgba(84,194,208,.08), transparent 55%),
+      linear-gradient(180deg,var(--abyss),var(--deep) 40%,var(--abyss));
+    color:var(--paper); font-family:"Newsreader",Georgia,serif; font-size:18px; line-height:1.62;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 26px}
+  h1,h2,h3,h4,.disp{font-family:"Space Grotesk",system-ui,sans-serif; font-weight:600; letter-spacing:-.01em; line-height:1.08}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  .eyebrow{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--monsoon)}
+  a{color:var(--monsoon)}
+  p{margin:0 0 1em}
+  section{padding:78px 0; border-top:1px solid var(--hair); position:relative}
+  .lead{font-size:21px; color:#D6E2F0}
+
+  /* ---------- top status bar ---------- */
+  .statusbar{position:sticky; top:0; z-index:50; backdrop-filter:blur(9px);
+    background:linear-gradient(180deg,rgba(8,19,32,.92),rgba(8,19,32,.72));
+    border-bottom:1px solid var(--hair); font-family:"IBM Plex Mono",monospace; font-size:12px}
+  .statusbar .wrap{display:flex; gap:18px; align-items:center; padding-top:11px; padding-bottom:11px; flex-wrap:wrap}
+  .statusbar .dot{width:8px;height:8px;border-radius:50%;background:var(--c-sev);box-shadow:0 0 0 0 rgba(216,68,46,.6);animation:pulse 2.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(216,68,46,.55)}70%{box-shadow:0 0 0 9px rgba(216,68,46,0)}100%{box-shadow:0 0 0 0 rgba(216,68,46,0)}}
+  .statusbar b{color:var(--paper)}
+  .statusbar .sep{color:var(--mist-dim)}
+  .statusbar .right{margin-left:auto; color:var(--mist)}
+  nav.toc{display:flex; gap:4px; flex-wrap:wrap}
+  nav.toc a{color:var(--mist); text-decoration:none; padding:4px 9px; border-radius:6px}
+  nav.toc a:hover{color:var(--paper); background:rgba(255,255,255,.06)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:62px 0 30px; border-top:none}
+  .hero .kicker{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:22px}
+  .badge{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.12em; text-transform:uppercase;
+    padding:5px 11px; border-radius:999px; border:1px solid var(--hair-strong); color:var(--mist)}
+  .badge.live{color:#fff; border-color:rgba(216,68,46,.6); background:rgba(216,68,46,.14)}
+  h1.title{font-size:clamp(38px,6.6vw,76px); font-weight:700; margin:.1em 0 .25em; letter-spacing:-.025em}
+  h1.title .warm{background:linear-gradient(96deg,var(--c-mod),var(--c-high) 45%,var(--c-sev) 80%,var(--c-ext));
+    -webkit-background-clip:text; background-clip:text; color:transparent}
+  .subtitle{font-size:clamp(19px,2.4vw,25px); color:#CBD9E8; max-width:760px; line-height:1.4}
+  .herogrid{display:grid; grid-template-columns:1.05fr .95fr; gap:38px; align-items:center; margin-top:30px}
+  .verdict{border:1px solid var(--hair); border-left:3px solid var(--c-sev); background:linear-gradient(180deg,rgba(216,68,46,.07),rgba(216,68,46,.02));
+    border-radius:0 12px 12px 0; padding:20px 22px}
+  .verdict .eyebrow{color:var(--c-high)}
+  .verdict p{margin:.5em 0 0; font-size:18px}
+
+  /* chart shell */
+  figure{margin:0}
+  .chartcard{background:linear-gradient(180deg,var(--panel),var(--slate)); border:1px solid var(--hair);
+    border-radius:16px; padding:18px 18px 12px; box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+  .chartcard h4{font-size:14px; margin:0 0 2px; color:var(--paper); font-weight:600}
+  .chartcard .cap{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--mist-dim); margin:0 0 8px; letter-spacing:.02em}
+  svg{display:block; width:100%; height:auto; overflow:visible}
+  .axis text{font-family:"IBM Plex Mono",monospace; fill:var(--mist-dim); font-size:10px}
+  .gridline{stroke:var(--hair); stroke-width:1}
+  .nino-path{fill:none; stroke:url(#heatgrad); stroke-width:3; stroke-linecap:round; stroke-linejoin:round}
+  .nino-fore{stroke-dasharray:5 5}
+  .draw{stroke-dasharray:1400; stroke-dashoffset:1400; animation:draw 2.6s var(--ease) .25s forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+
+  /* ---------- KPI dashboard ---------- */
+  .kpis{display:grid; grid-template-columns:repeat(6,1fr); gap:14px}
+  .kpi{background:linear-gradient(180deg,var(--panel),var(--slate)); border:1px solid var(--hair); border-radius:13px; padding:16px 15px; position:relative; overflow:hidden}
+  .kpi::after{content:""; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--barc,var(--monsoon))}
+  .kpi .v{font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:30px; line-height:1; letter-spacing:-.02em}
+  .kpi .u{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--mist); margin-top:7px; letter-spacing:.02em; line-height:1.4}
+  .kpi .t{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--mist-dim); margin-bottom:9px}
+
+  /* ---------- impact chips & legend ---------- */
+  .chip{display:inline-flex; align-items:center; gap:7px; font-family:"IBM Plex Mono",monospace; font-size:11px;
+    letter-spacing:.08em; text-transform:uppercase; padding:3px 10px; border-radius:999px; border:1px solid var(--hair-strong); white-space:nowrap}
+  .chip i{width:8px;height:8px;border-radius:2px;display:inline-block}
+  .lvl-low i{background:var(--c-low)} .lvl-mod i{background:var(--c-mod)} .lvl-high i{background:var(--c-high)}
+  .lvl-sev i{background:var(--c-sev)} .lvl-ext i{background:var(--c-ext)} .lvl-pos i{background:var(--tailwind)}
+  .lvl-low{color:#bfe6ea} .lvl-mod{color:#f3d896} .lvl-high{color:#f6c79b} .lvl-sev{color:#f3a99c} .lvl-ext{color:#f0908a} .lvl-pos{color:#aee2c5}
+  .legend{display:flex; gap:9px; flex-wrap:wrap; align-items:center; margin:14px 0 0}
+
+  .audience{display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--monsoon); border:1px dashed var(--monsoon-deep); padding:2px 8px; border-radius:6px; margin-right:6px}
+
+  /* ---------- generic blocks ---------- */
+  .cols2{display:grid; grid-template-columns:1fr 1fr; gap:30px}
+  .cols2.wide{grid-template-columns:1.2fr .8fr}
+  .findings{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:8px}
+  .finding{background:linear-gradient(180deg,var(--panel),var(--slate)); border:1px solid var(--hair); border-radius:13px; padding:20px 22px; position:relative}
+  .finding .n{position:absolute; top:16px; right:18px; font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--mist-dim)}
+  .finding h3{font-size:19px; margin:10px 0 7px; max-width:88%}
+  .finding p{font-size:16px; color:#CAD8E7; margin:0}
+
+  /* timeline ribbon */
+  .ribbon{position:relative; margin-top:26px; overflow-x:auto; padding-bottom:8px}
+  .ribbon-inner{min-width:880px}
+  .phasebar{display:grid; grid-template-columns:repeat(24,1fr); height:42px; border-radius:8px; overflow:hidden; border:1px solid var(--hair)}
+  .phasebar span{display:block}
+  .ticks{display:grid; grid-template-columns:repeat(8,1fr); margin-top:7px; font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--mist-dim)}
+  .ticks span{text-align:left}
+  .milestones{margin-top:22px; display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
+  .ms{display:flex; gap:13px; align-items:flex-start; background:linear-gradient(180deg,var(--panel),var(--slate)); border:1px solid var(--hair); border-radius:11px; padding:14px 16px}
+  .ms .when{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--monsoon); min-width:78px; padding-top:2px; letter-spacing:.02em}
+  .ms .what{font-size:15.5px; color:#CAD8E7}
+  .ms .what b{color:var(--paper); font-family:"Space Grotesk",sans-serif; font-weight:500}
+
+  /* tables */
+  .tablewrap{overflow-x:auto; border:1px solid var(--hair); border-radius:13px}
+  table{border-collapse:collapse; width:100%; min-width:680px; font-size:15px}
+  th,td{text-align:left; padding:13px 15px; border-bottom:1px solid var(--hair); vertical-align:top}
+  thead th{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mist); background:rgba(255,255,255,.025); position:sticky; top:0}
+  tbody tr:hover{background:rgba(255,255,255,.022)}
+  td b,th b{font-family:"Space Grotesk",sans-serif; font-weight:500; color:var(--paper)}
+  .reg{font-family:"Space Grotesk",sans-serif; font-weight:500; color:var(--paper)}
+
+  /* heatmap matrix */
+  .matrix{overflow-x:auto}
+  .mtab{border-collapse:separate; border-spacing:5px; min-width:720px}
+  .mtab th{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--mist); font-weight:500; text-transform:none; letter-spacing:.02em; background:none; padding:6px 8px; vertical-align:bottom}
+  .mtab td.lab{font-family:"Space Grotesk",sans-serif; font-weight:500; color:var(--paper); font-size:14px; white-space:nowrap; text-align:right; padding-right:12px}
+  .cell{width:78px; height:46px; border-radius:8px; text-align:center; vertical-align:middle; font-family:"IBM Plex Mono",monospace; font-size:10px; color:rgba(255,255,255,.92); letter-spacing:.04em; border:1px solid rgba(255,255,255,.06)}
+  .h-low{background:linear-gradient(160deg,#2f6f78,#3F9DA8)} .h-mod{background:linear-gradient(160deg,#b88a22,#E6B23C); color:#1a1305}
+  .h-high{background:linear-gradient(160deg,#b85a1f,#E87B2E)} .h-sev{background:linear-gradient(160deg,#a32f1f,#D8442E)}
+  .h-ext{background:linear-gradient(160deg,#6e120c,#9C1A12)} .h-pos{background:linear-gradient(160deg,#3f8a63,#5FB98C); color:#08200f}
+
+  /* region cards */
+  .regions{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+  .rcard{background:linear-gradient(180deg,var(--panel),var(--slate)); border:1px solid var(--hair); border-radius:14px; padding:18px 19px; display:flex; flex-direction:column; gap:9px}
+  .rcard h4{font-size:17px; display:flex; align-items:center; gap:9px}
+  .rcard .dir{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--mist)}
+  .rcard ul{margin:4px 0 0; padding-left:17px; font-size:14.5px; color:#C6D5E5} .rcard li{margin:.25em 0}
+
+  /* lifestyle playbook */
+  .play{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+  .pcard{background:linear-gradient(180deg,var(--panel),var(--slate)); border:1px solid var(--hair); border-radius:14px; padding:20px 22px}
+  .pcard h4{font-size:17.5px; margin:0 0 4px; display:flex; align-items:center; gap:10px}
+  .pcard .ic{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:rgba(84,194,208,.13);border:1px solid var(--hair-strong); font-size:15px}
+  .pcard ul{margin:8px 0 0; padding-left:18px; font-size:15px; color:#C9D7E6}
+  .pcard li{margin:.4em 0}
+  .pcard li b{color:var(--paper); font-family:"Space Grotesk",sans-serif; font-weight:500}
+
+  /* recommendations */
+  .recs{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+  .rec{background:linear-gradient(180deg,var(--panel),var(--slate)); border:1px solid var(--hair); border-radius:13px; padding:17px 17px}
+  .rec h4{font-size:15.5px; margin:0 0 6px; color:var(--monsoon)}
+  .rec ol{margin:0; padding-left:18px; font-size:14px; color:#C6D5E5} .rec li{margin:.45em 0}
+
+  .callout{border:1px solid var(--hair); border-left:3px solid var(--monsoon); background:rgba(84,194,208,.05); border-radius:0 12px 12px 0; padding:18px 22px; margin-top:8px}
+  .callout .eyebrow{color:var(--monsoon)}
+
+  .scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+  .scn{border:1px solid var(--hair); border-radius:13px; padding:18px; background:linear-gradient(180deg,var(--panel),var(--slate))}
+  .scn .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+  .scn.base .tag{color:var(--c-mod)} .scn.adv .tag{color:var(--c-high)} .scn.sev .tag{color:var(--c-sev)}
+  .scn .big{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:24px;letter-spacing:-.02em;margin:.1em 0}
+  .scn ul{margin:8px 0 0;padding-left:17px;font-size:14px;color:#C6D5E5} .scn li{margin:.3em 0}
+
+  .src{font-size:14px; color:var(--mist)}
+  .src ol{padding-left:20px} .src li{margin:.5em 0}
+  footer{padding:40px 0 70px; border-top:1px solid var(--hair); color:var(--mist-dim); font-size:13px; font-family:"IBM Plex Mono",monospace}
+
+  .reveal{opacity:0; transform:translateY(16px); transition:opacity .7s var(--ease), transform .7s var(--ease)}
+  .reveal.in{opacity:1; transform:none}
+
+  @media (max-width:880px){
+    body{font-size:17px}
+    .herogrid,.cols2,.cols2.wide{grid-template-columns:1fr}
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .findings,.regions,.play,.scenarios{grid-template-columns:1fr}
+    .recs{grid-template-columns:1fr 1fr}
+    .milestones{grid-template-columns:1fr}
+    nav.toc{display:none}
+    section{padding:54px 0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .draw{animation:none; stroke-dashoffset:0}
+    .reveal{opacity:1; transform:none; transition:none}
+    .statusbar .dot{animation:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- STATUS BAR -->
+<div class="statusbar">
+  <div class="wrap">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="mono"><b>ENSO STATUS: EL NIÑO ADVISORY</b> <span class="sep">·</span> Niño 3.4 = <b>+1.7°C</b> &amp; rising <span class="sep">·</span> as of <b>26 Jun 2026</b></span>
+    <nav class="toc" aria-label="Sections">
+      <a href="#summary">Summary</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#global">Global</a>
+      <a href="#india">India</a>
+      <a href="#crops">Crops</a>
+      <a href="#economy">Economy</a>
+      <a href="#lifestyle">Lifestyle</a>
+      <a href="#actions">Actions</a>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="badge live">Climate &amp; Agro-Economic Intelligence</span>
+      <span class="badge">Edition: Jun 2026</span>
+      <span class="badge">Horizon: 2026 → 2028</span>
+    </div>
+    <p class="eyebrow">The Pacific is running hot — and the monsoon is downstream</p>
+    <h1 class="title">When the Pacific Warms,<br><span class="warm">India Thirsts.</span></h1>
+    <p class="subtitle">A developing El Niño — potentially among the strongest on record by oceanic measure — has formed in the equatorial Pacific. This dossier maps what to expect by segment, by region and by month: rainfall, heat, storms, crop yields, prices, and the practical changes households and decision-makers should make now.</p>
+
+    <div class="herogrid">
+      <figure class="chartcard reveal">
+        <h4>Niño 3.4 sea-surface temperature anomaly — the engine of the whole story</h4>
+        <p class="cap">°C above 1991–2020 normal · solid = observed · dashed = multi-model forecast (IRI/NOAA CPC, Jun 2026)</p>
+        <svg viewBox="0 0 620 300" role="img" aria-label="Line chart: Niño 3.4 index rising from neutral in early 2026 into very-strong El Niño territory by late 2026, decaying through 2027 toward La Niña.">
+          <defs>
+            <linearGradient id="heatgrad" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0%" stop-color="#3F9DA8"/><stop offset="35%" stop-color="#E6B23C"/>
+              <stop offset="62%" stop-color="#E87B2E"/><stop offset="82%" stop-color="#D8442E"/><stop offset="100%" stop-color="#9C1A12"/>
+            </linearGradient>
+            <linearGradient id="bandVS" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(156,26,18,.20)"/><stop offset="100%" stop-color="rgba(156,26,18,0)"/>
+            </linearGradient>
+          </defs>
+          <!-- plot area x:56..596 (540) ; y:24..250 (anomaly +2.6 .. -0.8) -->
+          <!-- threshold bands -->
+          <rect x="56" y="24" width="540" height="226" fill="none"/>
+          <!-- very strong band (>=2.0) -->
+          <rect x="56" y="24" width="540" height="32.6" fill="url(#bandVS)"/>
+          <!-- threshold lines: y for value v = 250 - (v+0.8)/3.4*226 -->
+          <!-- 2.0 -->
+          <line class="gridline" x1="56" y1="63.9" x2="596" y2="63.9" stroke-dasharray="3 4"/>
+          <text class="mono" x="600" y="67" fill="#f0908a" font-size="9">+2.0 very strong</text>
+          <!-- 1.5 -->
+          <line class="gridline" x1="56" y1="97.2" x2="596" y2="97.2" stroke-dasharray="3 4"/>
+          <text class="mono" x="600" y="100" fill="#f6c79b" font-size="9">+1.5 strong</text>
+          <!-- 1.0 -->
+          <line class="gridline" x1="56" y1="130.4" x2="596" y2="130.4" stroke-dasharray="3 4"/>
+          <text class="mono" x="600" y="133" fill="#f3d896" font-size="9">+1.0 moderate</text>
+          <!-- 0.5 onset -->
+          <line x1="56" y1="163.6" x2="596" y2="163.6" stroke="#54C2D0" stroke-width="1.2" stroke-dasharray="2 3"/>
+          <text class="mono" x="600" y="166.6" fill="#54C2D0" font-size="9">+0.5 El Niño onset</text>
+          <!-- 0.0 -->
+          <line class="gridline" x1="56" y1="196.8" x2="596" y2="196.8"/>
+          <text class="mono" x="600" y="200" fill="#6E839B" font-size="9">0.0</text>
+          <!-- -0.5 La Niña -->
+          <line x1="56" y1="230.1" x2="596" y2="230.1" stroke="#54C2D0" stroke-width="1" stroke-dasharray="2 3"/>
+          <text class="mono" x="600" y="233" fill="#6E839B" font-size="9">−0.5 La Niña</text>
+
+          <!-- observed path (Jan..Jun 2026) -->
+          <!-- x per month: Jan=56 ... step 540/27 ~20 ; months idx 0..27 (Jan26..Apr28) -->
+          <!-- pts: Jan -0.3,Feb -0.1,Mar +0.1,Apr +0.3,May +0.94,Jun +1.55(now) -->
+          <path class="nino-path draw" d="
+            M56,216.7 L76,203.4 L96,190.1 L116,176.8 L136,134.2 L156,93.7"/>
+          <!-- forecast path (Jun..) dashed -->
+          <path class="nino-path nino-fore" d="
+            M156,93.7 L176,86.5 L196,73.2 L216,66.5 L236,63.9 L256,66.5 L276,73.2
+            L296,93.7 L316,120.3 L336,147.0 L356,173.6 L376,193.5 L396,210.0 L416,220.0
+            L436,226.6 L456,231.6 L476,234.9 L496,236.6 L516,236.6"/>
+          <!-- now marker -->
+          <circle cx="156" cy="93.7" r="4.5" fill="#fff"/><circle cx="156" cy="93.7" r="8" fill="none" stroke="#fff" stroke-opacity=".4"/>
+          <text class="mono" x="150" y="84" fill="#fff" font-size="10" text-anchor="middle">NOW</text>
+          <!-- peak marker -->
+          <circle cx="236" cy="63.9" r="3.5" fill="#9C1A12" stroke="#f0908a"/>
+          <text class="mono" x="236" y="52" fill="#f0908a" font-size="9" text-anchor="middle">peak ~SON</text>
+          <!-- x axis labels -->
+          <g class="axis">
+            <text x="56" y="266">Jan26</text>
+            <text x="156" y="266">Jun26</text>
+            <text x="256" y="266">Nov26</text>
+            <text x="356" y="266">Apr27</text>
+            <text x="456" y="266">Sep27</text>
+            <text x="516" y="266">Dec27</text>
+          </g>
+        </svg>
+      </figure>
+
+      <div class="verdict reveal">
+        <p class="eyebrow">The bottom line</p>
+        <p><b>Oceanic El Niño is intensifying toward a very-strong peak around September–November 2026</b>, then decaying through the first half of 2027 with La Niña likely returning late 2027.</p>
+        <p>For India, the official forecast is a <b>below-normal monsoon (~90% of normal)</b> with a <b>~60% chance of a deficient season</b> — the heaviest stress falling on the <b>second half (Aug–Sep)</b> and on the rain-fed core of central, western and southern India.</p>
+        <p style="margin-top:14px"><span class="chip lvl-sev"><i></i>Severe oceanic signal</span> <span class="chip lvl-high"><i></i>High India crop risk</span></p>
+      </div>
+    </div>
+
+    <div class="legend" aria-label="Impact intensity legend">
+      <span class="eyebrow" style="margin-right:4px">Impact scale →</span>
+      <span class="chip lvl-low"><i></i>Low</span>
+      <span class="chip lvl-mod"><i></i>Moderate</span>
+      <span class="chip lvl-high"><i></i>High</span>
+      <span class="chip lvl-sev"><i></i>Severe</span>
+      <span class="chip lvl-ext"><i></i>Extreme</span>
+      <span class="chip lvl-pos"><i></i>Net positive</span>
+    </div>
+  </div>
+</header>
+
+<!-- WHO SHOULD READ WHAT -->
+<section style="padding-top:46px">
+  <div class="wrap">
+    <p class="eyebrow">How to read this report</p>
+    <h2 style="font-size:clamp(24px,3vw,32px); margin:6px 0 16px">Built so different readers can land where they need to</h2>
+    <div class="cols2 wide">
+      <p class="lead">It follows the consulting pyramid: the answer first, then the dashboard, then progressively deeper layers. Skim the summary and timeline for the verdict; dive into the India, crop and economy sections for operational detail; jump to the lifestyle playbook if you just want to know what to do at home or on the farm.</p>
+      <div>
+        <div class="ms"><span class="when">Executives<br>&amp; boards</span><span class="what"><b>Summary → Timeline → Economy → Actions.</b> The verdict, the loss bands, the decisions.</span></div>
+        <div class="ms" style="margin-top:12px"><span class="when">Farmers<br>&amp; agri-cos</span><span class="what"><b>India → Crops → Lifestyle.</b> What to sow, what to avoid, when, where.</span></div>
+        <div class="ms" style="margin-top:12px"><span class="when">Households<br>&amp; public</span><span class="what"><b>Timeline → Lifestyle playbook.</b> Water, power, food budget, health.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXECUTIVE SUMMARY -->
+<section id="summary">
+  <div class="wrap">
+    <p class="eyebrow">01 · Executive summary</p>
+    <h2 style="font-size:clamp(26px,3.4vw,38px); margin:6px 0 6px">Six things to take away</h2>
+    <p class="lead" style="max-width:780px">A genuine El Niño has formed and the signal is consistent across forecasting centres. The translation to ground-level impact is strong but not mechanical — and one technical nuance (below) keeps this from being a guaranteed catastrophe.</p>
+    <div class="findings">
+      <article class="finding reveal"><span class="n">01</span><h3>A very-strong oceanic event is forecast — possibly near record</h3><p>Niño 3.4 hit <b>+1.7°C</b> by mid-June; most models point to a peak of <b>≥+2.0°C around Sep–Nov 2026</b>, with upper-ocean heat rivalling the 1997–98 event. <span class="chip lvl-sev"><i></i>Severe</span></p></article>
+      <article class="finding reveal"><span class="n">02</span><h3>But the <i>atmospheric</i> bite may be more moderate</h3><p>On the newer RONI index — which strips out background ocean warming and tracks the actual atmospheric response — the "climate-strength" El Niño looks closer to <b>moderate</b>. The ocean may break records; the weather may not. <span class="chip lvl-mod"><i></i>Moderate</span></p></article>
+      <article class="finding reveal"><span class="n">03</span><h3>India's monsoon is forecast below normal</h3><p>IMD has cut its 2026 forecast to <b>~90% of the long-period average (~800 mm vs 868.6 mm)</b>, with a <b>~60% chance of a deficient season</b> and a neutral Indian Ocean Dipole that won't cushion the blow. <span class="chip lvl-high"><i></i>High</span></p></article>
+      <article class="finding reveal"><span class="n">04</span><h3>Stress is back-loaded and uneven</h3><p>The El Niño matured after onset, so <b>June–July fare better than August–September</b>. Geographically, <b>central / western / southern India</b> bear the brunt; the wetter east (Odisha, West Bengal) is more resilient. <span class="chip lvl-high"><i></i>High</span></p></article>
+      <article class="finding reveal"><span class="n">05</span><h3>The hit lands on food, water and prices</h3><p>Strong El Niños have historically cut national rice output by <b>~3.4 million tonnes</b> and foodgrain output by <b>12–18%</b> in the worst-hit states — feeding into food inflation and rural demand. <span class="chip lvl-high"><i></i>High</span></p></article>
+      <article class="finding reveal"><span class="n">06</span><h3>It is manageable with early action</h3><p>The government has staged a seed "war chest" (~1.93 mt for kharif). Households, farmers and firms that pre-position water, shift to short-duration / drought-tolerant crops and budget for higher prices will absorb most of the shock. <span class="chip lvl-mod"><i></i>Moderate</span></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">02 · At a glance</p>
+    <h2 style="font-size:clamp(24px,3vw,32px); margin:6px 0 18px">The dashboard</h2>
+    <div class="kpis">
+      <div class="kpi" style="--barc:var(--c-sev)"><div class="t">Niño 3.4 now</div><div class="v">+1.7°C</div><div class="u">moderate &amp; rising · mid-Jun 2026</div></div>
+      <div class="kpi" style="--barc:var(--c-ext)"><div class="t">Forecast peak</div><div class="v">≥2.0°C</div><div class="u">~Sep–Nov 2026 · 13/24 models say "very strong"</div></div>
+      <div class="kpi" style="--barc:var(--c-high)"><div class="t">India monsoon</div><div class="v">~90%</div><div class="u">of normal (LPA) · "below normal"</div></div>
+      <div class="kpi" style="--barc:var(--c-high)"><div class="t">Deficient-season odds</div><div class="v">~60%</div><div class="u">vs 16% climatological baseline</div></div>
+      <div class="kpi" style="--barc:var(--c-mod)"><div class="t">Global GDP drag</div><div class="v">~1%</div><div class="u">in event year (strong events, est.)</div></div>
+      <div class="kpi" style="--barc:var(--c-mod)"><div class="t">Global food prices</div><div class="v">+5–8%</div><div class="u">projected · 15–20M more food-insecure</div></div>
+    </div>
+    <div class="callout reveal">
+      <p class="eyebrow">Read this caveat first</p>
+      <p style="margin:.5em 0 0">Seasonal forecasts carry real uncertainty — the "spring predictability barrier" only just lifted, and every El Niño writes its own signature. Treat the numbers here as <b>well-grounded central estimates with wide bands</b>, not certainties. The single biggest swing factor is whether the atmosphere responds like a "very strong" ocean (worse) or a "moderate" RONI event (milder).</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="wrap">
+    <p class="eyebrow">03 · Timeline &amp; duration</p>
+    <h2 style="font-size:clamp(24px,3vw,32px); margin:6px 0 6px">From now to La Niña: a two-year arc</h2>
+    <p class="lead" style="max-width:800px">El Niños are seasonal creatures — they strengthen into Northern-Hemisphere winter and unwind in spring. This one is forecast to peak in autumn 2026, fade through 2027, and likely flip to La Niña late 2027.</p>
+
+    <div class="ribbon reveal">
+      <div class="ribbon-inner">
+        <div class="phasebar" aria-label="ENSO phase intensity over 24 months from Jul 2026 to Jun 2028">
+          <!-- 24 cells, Jul26 .. Jun28 -->
+          <span style="background:var(--c-high)"></span><span style="background:var(--c-sev)"></span>
+          <span style="background:var(--c-ext)"></span><span style="background:var(--c-ext)"></span>
+          <span style="background:var(--c-ext)"></span><span style="background:var(--c-sev)"></span>
+          <span style="background:var(--c-sev)"></span><span style="background:var(--c-high)"></span>
+          <span style="background:var(--c-high)"></span><span style="background:var(--c-mod)"></span>
+          <span style="background:var(--c-mod)"></span><span style="background:var(--c-low)"></span>
+          <span style="background:var(--c-low)"></span><span style="background:#2c4a63"></span>
+          <span style="background:#2c4a63"></span><span style="background:#2c4a63"></span>
+          <span style="background:#2a5a66"></span><span style="background:#2a7c8c"></span>
+          <span style="background:#2a7c8c"></span><span style="background:#2a7c8c"></span>
+          <span style="background:#2a7c8c"></span><span style="background:#54C2D0"></span>
+          <span style="background:#54C2D0"></span><span style="background:#54C2D0"></span>
+        </div>
+        <div class="ticks">
+          <span>Jul '26</span><span>Oct '26</span><span>Jan '27</span><span>Apr '27</span><span>Jul '27</span><span>Oct '27</span><span>Jan '28</span><span>Apr '28</span>
+        </div>
+      </div>
+    </div>
+    <p class="cap mono" style="color:var(--mist-dim); margin-top:8px">Warm cells = El Niño intensity (peak ≈ SON 2026) · slate = neutral · teal = returning La Niña. Schematic, from current multi-model consensus.</p>
+
+    <div class="milestones">
+      <div class="ms"><span class="when">Jun–Jul '26</span><span class="what"><b>Monsoon onset, late &amp; soft.</b> Reached Kerala on 4 Jun (3 days late). First half of the season is the least affected — sowing window still workable, but June rainfall below normal with elevated heat.</span></div>
+      <div class="ms"><span class="when">Aug–Sep '26</span><span class="what"><b>The danger window.</b> El Niño near peak; risk of mid-season dry spells over the core monsoon zone. August dry breaks would be the single biggest threat to kharif yields.</span></div>
+      <div class="ms"><span class="when">Oct '26</span><span class="what"><b>Monsoon withdrawal &amp; the kharif verdict.</b> Final rainfall tally lands; reservoir levels and soil moisture set the stage for the winter (rabi) crop.</span></div>
+      <div class="ms"><span class="when">Nov '26–Feb '27</span><span class="what"><b>Peak teleconnection &amp; warm winter.</b> El Niño at full strength; typically a warmer-than-usual North Indian winter. Rabi sowing depends on residual moisture &amp; irrigation; reservoir-fed regions cope better.</span></div>
+      <div class="ms"><span class="when">Mar–May '27</span><span class="what"><b>Decay + heat.</b> Event weakens but the post-El Niño spring/summer often runs hot — watch for intense pre-monsoon heatwaves and water stress.</span></div>
+      <div class="ms"><span class="when">H2 '27 onward</span><span class="what"><b>La Niña likely returns.</b> The pattern typically flips — which tends to <i>favour</i> the Indian monsoon, but can bring its own floods elsewhere. The 2027 monsoon outlook turns more constructive.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL SEGMENTS -->
+<section id="global">
+  <div class="wrap">
+    <p class="eyebrow">04 · The world, by segment</p>
+    <h2 style="font-size:clamp(24px,3vw,32px); margin:6px 0 6px">El Niño rearranges the planet's rainfall</h2>
+    <p class="lead" style="max-width:820px">By shifting the Pacific's heat and the global atmospheric circulation, El Niño makes some regions drier and others wetter. It is <b>not uniformly negative</b> — a few breadbaskets actually benefit.</p>
+
+    <div class="regions" style="margin-top:24px">
+      <div class="rcard reveal"><h4>South &amp; Southeast Asia <span class="chip lvl-high"><i></i>High</span></h4><div class="dir">↓ Drier · weaker monsoon</div><ul><li>India: below-normal monsoon, heat, water stress</li><li>Indonesia, Philippines, Thailand: drought risk to rice &amp; palm oil</li><li>Knock-on: rice, sugar, palm-oil prices firm</li></ul></div>
+      <div class="rcard reveal"><h4>Australia <span class="chip lvl-high"><i></i>High</span></h4><div class="dir">↓ Drier · hotter east</div><ul><li>Eastern Australia drought &amp; bushfire risk rises</li><li>Wheat &amp; livestock pressure</li></ul></div>
+      <div class="rcard reveal"><h4>Southern Brazil &amp; Argentina <span class="chip lvl-pos"><i></i>Net positive</span></h4><div class="dir">↑ Wetter · a genuine tailwind</div><ul><li>Above-average rain typically lifts soybean &amp; maize</li><li>A partial offset to Asian supply losses</li></ul></div>
+      <div class="rcard reveal"><h4>Amazon &amp; Northern S. America <span class="chip lvl-sev"><i></i>Severe</span></h4><div class="dir">↓ Severe drought</div><ul><li>Major drought &amp; fire risk (2023 saw ~68% under water deficit)</li><li>River transport, hydropower &amp; ecosystems hit</li></ul></div>
+      <div class="rcard reveal"><h4>East Africa <span class="chip lvl-mod"><i></i>Mixed</span></h4><div class="dir">↑ Wetter "short rains"</div><ul><li>Heavier Oct–Dec rains → flooding &amp; disease risk</li><li>Can relieve drought but damages infrastructure</li></ul></div>
+      <div class="rcard reveal"><h4>Pacific coast (Peru/Ecuador) <span class="chip lvl-sev"><i></i>Severe</span></h4><div class="dir">↑ Coastal flooding · ↓ fisheries</div><ul><li>Warm water collapses anchovy fishery → fishmeal prices</li><li>Coastal flooding &amp; landslides</li></ul></div>
+      <div class="rcard reveal"><h4>North America <span class="chip lvl-mod"><i></i>Moderate</span></h4><div class="dir">Wetter south · warmer north</div><ul><li>Southern-tier US wetter; northern winter milder</li><li>Below-normal 2026 Atlantic hurricane season expected</li></ul></div>
+      <div class="rcard reveal"><h4>Global fisheries &amp; carbon <span class="chip lvl-mod"><i></i>Moderate</span></h4><div class="dir">Disruption</div><ul><li>Tropical upwelling fisheries disrupted</li><li>Land carbon sink weakens during El Niño droughts</li></ul></div>
+      <div class="rcard reveal"><h4>Atlantic storms <span class="chip lvl-low"><i></i>Low / suppressed</span></h4><div class="dir">↓ Fewer hurricanes</div><ul><li>El Niño wind shear tends to suppress Atlantic activity</li><li>One of El Niño's few broadly benign effects</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDIA DEEP DIVE -->
+<section id="india">
+  <div class="wrap">
+    <p class="eyebrow">05 · India deep dive</p>
+    <h2 style="font-size:clamp(26px,3.4vw,40px); margin:6px 0 6px">The monsoon is India's real finance minister</h2>
+    <p class="lead" style="max-width:840px">The southwest monsoon delivers ~70% of annual rainfall and waters roughly 60% of farmland that has no irrigation. A below-normal year ripples from the field to the grain market to the household budget.</p>
+
+    <!-- Rainfall profile -->
+    <div class="cols2 wide" style="margin-top:26px; align-items:start">
+      <figure class="chartcard reveal">
+        <h4>Monsoon rainfall, month by month (% of normal)</h4>
+        <p class="cap">Illustrative seasonal profile · the deficit deepens in the second half as El Niño peaks</p>
+        <svg viewBox="0 0 520 280" role="img" aria-label="Bar chart of monthly monsoon rainfall as percent of normal: June ~85, July ~95, August ~85, September ~80, season ~90.">
+          <!-- baseline 100% -->
+          <!-- plot x 60..500, y 30..230 ; 0..120% -->
+          <line class="gridline" x1="60" y1="63.3" x2="500" y2="63.3"/><text class="mono" x="34" y="67" fill="#6E839B" font-size="10">120</text>
+          <line x1="60" y1="96.7" x2="500" y2="96.7" stroke="#54C2D0" stroke-width="1.4" stroke-dasharray="4 4"/><text class="mono" x="505" y="100" fill="#54C2D0" font-size="10">100% normal</text>
+          <line class="gridline" x1="60" y1="130" x2="500" y2="130"/><text class="mono" x="40" y="134" fill="#6E839B" font-size="10">80</text>
+          <line class="gridline" x1="60" y1="163.3" x2="500" y2="163.3"/><text class="mono" x="40" y="167" fill="#6E839B" font-size="10">60</text>
+          <line class="gridline" x1="60" y1="196.7" x2="500" y2="196.7"/><text class="mono" x="40" y="200" fill="#6E839B" font-size="10">40</text>
+          <line class="gridline" x1="60" y1="230" x2="500" y2="230"/>
+          <!-- bars: value% -> height; y0=230 baseline of 0; scale 200px/120% => 1.667 px per % -->
+          <!-- June 85 -->
+          <rect x="86" y="88.3" width="58" height="141.7" rx="4" fill="var(--c-high)"/><text class="mono" x="115" y="80" fill="#f6c79b" font-size="11" text-anchor="middle">85%</text><text class="mono" x="115" y="248" fill="#94A9C0" font-size="11" text-anchor="middle">Jun</text>
+          <!-- July 95 -->
+          <rect x="172" y="71.7" width="58" height="158.3" rx="4" fill="var(--c-mod)"/><text class="mono" x="201" y="63" fill="#f3d896" font-size="11" text-anchor="middle">95%</text><text class="mono" x="201" y="248" fill="#94A9C0" font-size="11" text-anchor="middle">Jul</text>
+          <!-- Aug 85 -->
+          <rect x="258" y="88.3" width="58" height="141.7" rx="4" fill="var(--c-high)"/><text class="mono" x="287" y="80" fill="#f6c79b" font-size="11" text-anchor="middle">85%</text><text class="mono" x="287" y="248" fill="#94A9C0" font-size="11" text-anchor="middle">Aug</text>
+          <!-- Sep 80 -->
+          <rect x="344" y="96.7" width="58" height="133.3" rx="4" fill="var(--c-sev)"/><text class="mono" x="373" y="88" fill="#f3a99c" font-size="11" text-anchor="middle">80%</text><text class="mono" x="373" y="248" fill="#94A9C0" font-size="11" text-anchor="middle">Sep</text>
+          <!-- Season 90 -->
+          <rect x="430" y="80" width="58" height="150" rx="4" fill="url(#heatgrad)"/><text class="mono" x="459" y="72" fill="#fff" font-size="11" text-anchor="middle">~90%</text><text class="mono" x="459" y="248" fill="#fff" font-size="11" text-anchor="middle">Season</text>
+        </svg>
+      </figure>
+
+      <div class="reveal">
+        <h3 style="font-size:20px; margin:0 0 8px">Rainfall: the spatial story</h3>
+        <p>The deficit will not be spread evenly. The <b>monsoon "core zone"</b> — central India's rain-fed belt (Madhya Pradesh, Vidarbha, Marathwada) plus the interior peninsula — is most exposed. The <b>northwest</b> (Rajasthan, Gujarat) is climatologically dry and sensitive; the <b>east</b> (Odisha, West Bengal, Jharkhand) has a higher rainfall baseline and tends to be more resilient.</p>
+        <p>A counter-force worth noting: India's warming atmosphere now holds more moisture, which has been producing erratic heavy bursts (e.g. recent Rajasthan events). So a below-normal <i>total</i> can still coexist with localised <b>flash floods</b> — fewer rainy days, but heavier ones.</p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
+          <span class="chip lvl-sev"><i></i>Central core: high stress</span>
+          <span class="chip lvl-high"><i></i>NW &amp; interior south</span>
+          <span class="chip lvl-low"><i></i>East: resilient</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- temp & storms -->
+    <div class="cols2" style="margin-top:34px">
+      <div class="reveal">
+        <h3 style="font-size:20px; margin:0 0 8px">🌡️ Temperature &amp; heat</h3>
+        <p>El Niño years skew hot. Expect <b>above-normal heatwaves</b> in the pre- and early-monsoon window of 2026 and again in the post-event spring of <b>March–May 2027</b>, plus a generally <b>warmer North Indian winter</b>. Heat compounds the rainfall problem: it raises evaporation, crop water demand and power loads simultaneously.</p>
+        <p><span class="chip lvl-high"><i></i>Heatwaves: above normal</span></p>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:20px; margin:0 0 8px">🌀 Storms &amp; cyclones</h3>
+        <p>El Niño's relationship with North Indian Ocean cyclones is mixed — it can shift activity and timing rather than simply suppress it, and post-monsoon (Oct–Dec) Bay of Bengal systems remain a live risk for the east coast. Globally, the Atlantic hurricane season is expected <b>below normal</b>. Net for India: <b>moderate, watch the post-monsoon Bay of Bengal window</b>.</p>
+        <p><span class="chip lvl-mod"><i></i>Cyclones: moderate / watch</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CROPS -->
+<section id="crops">
+  <div class="wrap">
+    <p class="eyebrow">06 · Agriculture · crop × region risk</p>
+    <h2 style="font-size:clamp(24px,3.2vw,36px); margin:6px 0 6px">What's at risk, where</h2>
+    <p class="lead" style="max-width:820px">The single most useful page for anyone with skin in the ground. Rows are crops; columns are regions. Colour = vulnerability this season. The pattern is consistent across decades of El Niño data: <b>water-hungry, long-duration crops in rain-fed central/western/southern India are most exposed; hardy millets and the irrigated east hold up best.</b></p>
+
+    <div class="matrix reveal" style="margin-top:22px">
+      <table class="mtab" aria-label="Crop by region vulnerability heatmap">
+        <thead><tr>
+          <th></th>
+          <th>Central<br>(MP·Vidarbha)</th>
+          <th>West<br>(Mah·Guj)</th>
+          <th>South<br>(Kar·AP·TN)</th>
+          <th>North-West<br>(Raj·Pun·Har)</th>
+          <th>East<br>(Odi·WB·Jhk)</th>
+          <th>Indo-Gangetic<br>(UP·Bihar)</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="lab">Rice (rain-fed)</td><td class="cell h-sev">SEVERE</td><td class="cell h-sev">SEVERE</td><td class="cell h-high">HIGH</td><td class="cell h-mod">MOD*</td><td class="cell h-low">LOW</td><td class="cell h-mod">MOD</td></tr>
+          <tr><td class="lab">Pulses (tur/urad)</td><td class="cell h-sev">SEVERE</td><td class="cell h-high">HIGH</td><td class="cell h-high">HIGH</td><td class="cell h-high">HIGH</td><td class="cell h-mod">MOD</td><td class="cell h-mod">MOD</td></tr>
+          <tr><td class="lab">Soybean</td><td class="cell h-sev">SEVERE</td><td class="cell h-sev">SEVERE</td><td class="cell h-mod">MOD</td><td class="cell h-high">HIGH</td><td class="cell h-low">LOW</td><td class="cell h-low">—</td></tr>
+          <tr><td class="lab">Groundnut</td><td class="cell h-high">HIGH</td><td class="cell h-high">HIGH</td><td class="cell h-sev">SEVERE</td><td class="cell h-high">HIGH</td><td class="cell h-low">LOW</td><td class="cell h-low">—</td></tr>
+          <tr><td class="lab">Cotton</td><td class="cell h-high">HIGH</td><td class="cell h-sev">SEVERE</td><td class="cell h-high">HIGH</td><td class="cell h-mod">MOD</td><td class="cell h-low">LOW</td><td class="cell h-low">—</td></tr>
+          <tr><td class="lab">Sugarcane</td><td class="cell h-high">HIGH</td><td class="cell h-high">HIGH</td><td class="cell h-high">HIGH</td><td class="cell h-mod">MOD*</td><td class="cell h-mod">MOD</td><td class="cell h-mod">MOD*</td></tr>
+          <tr><td class="lab">Maize</td><td class="cell h-high">HIGH</td><td class="cell h-high">HIGH</td><td class="cell h-mod">MOD</td><td class="cell h-mod">MOD</td><td class="cell h-low">LOW</td><td class="cell h-mod">MOD</td></tr>
+          <tr><td class="lab">Millets (bajra/jowar/ragi)</td><td class="cell h-low">LOW★</td><td class="cell h-low">LOW★</td><td class="cell h-low">LOW★</td><td class="cell h-low">LOW★</td><td class="cell h-low">LOW★</td><td class="cell h-low">LOW★</td></tr>
+          <tr><td class="lab">Tea</td><td class="cell h-low">—</td><td class="cell h-low">—</td><td class="cell h-high">HIGH</td><td class="cell h-low">—</td><td class="cell h-mod">MOD</td><td class="cell h-low">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cap mono" style="color:var(--mist-dim); margin-top:10px">★ Millets are the resilient hedge — drought-tolerant, short-duration, low-water. * = risk lowered by irrigation/canal access. Synthesis of CRIDA / peer-reviewed ENSO–yield studies; treat as directional, not field-level.</p>
+
+    <h3 style="font-size:21px; margin:34px 0 8px">The recommendation: what to avoid, what to switch to</h3>
+    <div class="tablewrap reveal">
+      <table aria-label="Crop switching recommendations by region">
+        <thead><tr><th>Region</th><th>Avoid / de-risk</th><th>Prefer / switch to</th><th>Action window</th></tr></thead>
+        <tbody>
+          <tr><td class="reg">Central India<br><span class="mono" style="font-size:12px;color:var(--mist)">MP, Vidarbha, Marathwada</span></td><td>Long-duration paddy, water-intensive soybean on shallow soils, sugarcane on rain-fed plots</td><td><b>Bajra, jowar, ragi, short-duration tur</b>, castor, drought-tolerant cotton hybrids</td><td>Decide at sowing; keep re-sow seed ready for Aug dry break</td></tr>
+          <tr><td class="reg">Western India<br><span class="mono" style="font-size:12px;color:var(--mist)">Maharashtra, Gujarat</span></td><td>Cotton &amp; soybean monocrop on rain-fed land, sugarcane expansion</td><td><b>Pearl millet, pigeon pea, groundnut with mulching</b>, intercropping to spread risk</td><td>Pre-monsoon; lock in drip/mulch before peak heat</td></tr>
+          <tr><td class="reg">Southern India<br><span class="mono" style="font-size:12px;color:var(--mist)">Karnataka, AP, interior TN</span></td><td>Rain-fed groundnut, long-duration paddy without assured water</td><td><b>Finger millet (ragi), foxtail millet, pulses</b>, tank-fed short paddy only where storage is good</td><td>Watch reservoir levels before transplanting paddy</td></tr>
+          <tr><td class="reg">North-West<br><span class="mono" style="font-size:12px;color:var(--mist)">Rajasthan, Punjab, Haryana</span></td><td>Expanding paddy area in canal-stressed pockets</td><td><b>Bajra, moong, cluster bean (guar)</b>; protect rabi wheat with stored irrigation</td><td>Prioritise groundwater/canal budgeting for rabi</td></tr>
+          <tr><td class="reg">Eastern India<br><span class="mono" style="font-size:12px;color:var(--mist)">Odisha, WB, Jharkhand</span></td><td>Few hard avoids — region is more resilient</td><td>Maintain paddy where rainfall holds; keep short-duration backups</td><td>Standard calendar; monitor Aug spells</td></tr>
+          <tr><td class="reg">Indo-Gangetic plain<br><span class="mono" style="font-size:12px;color:var(--mist)">UP, Bihar</span></td><td>Over-reliance on late rains for transplanting</td><td>Direct-seeded rice (DSR) to save water; pulses on uplands</td><td>Shift to DSR at season start</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout reveal" style="margin-top:22px">
+      <p class="eyebrow">The universal rule</p>
+      <p style="margin:.5em 0 0">When in doubt: <b>shorten duration, cut water demand, diversify the plot.</b> Short-cycle and drought-tolerant varieties (millets above all) finish before a late-season dry spell can ruin them, and a mixed plot never loses everything at once. The kharif crop most likely to disappoint is anything long-duration and thirsty grown without assured irrigation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ECONOMY & LOSSES -->
+<section id="economy">
+  <div class="wrap">
+    <p class="eyebrow">07 · Economics, prices &amp; losses</p>
+    <h2 style="font-size:clamp(24px,3.2vw,36px); margin:6px 0 6px">How the weather becomes a wallet problem</h2>
+    <p class="lead" style="max-width:820px">A weak monsoon transmits through a predictable chain: lower yields → tighter supply → food inflation → squeezed rural demand → pressure on growth, power and water systems.</p>
+
+    <div class="cols2 wide" style="margin-top:24px; align-items:start">
+      <div class="reveal">
+        <h3 style="font-size:20px; margin:0 0 8px">The transmission chain</h3>
+        <div class="ms"><span class="when">Field</span><span class="what">Kharif yields fall most for rice, pulses, oilseeds, cotton in the high-risk states.</span></div>
+        <div class="ms" style="margin-top:10px"><span class="when">Market</span><span class="what"><b>Food inflation</b> firms — pulses, edible oils, sugar and vegetables are the usual movers; cereals are partly buffered by government stocks.</span></div>
+        <div class="ms" style="margin-top:10px"><span class="when">Rural</span><span class="what">Lower farm incomes dent <b>rural demand</b> (FMCG, two-wheelers, durables) and can raise distress migration.</span></div>
+        <div class="ms" style="margin-top:10px"><span class="when">Macro</span><span class="what">Drag on agri GVA &amp; headline growth; complicates the interest-rate path; widens the import bill for edible oils/pulses.</span></div>
+        <div class="ms" style="margin-top:10px"><span class="when">Systems</span><span class="what"><b>Power &amp; water:</b> heat lifts cooling demand and irrigation pumping just as reservoirs run lower — a double squeeze for utilities and cities.</span></div>
+      </div>
+
+      <figure class="chartcard reveal">
+        <h4>What past strong El Niños cost the global economy</h4>
+        <p class="cap">Estimated event-year output loss, US$ billions (Nature Communications, 2023)</p>
+        <svg viewBox="0 0 480 250" role="img" aria-label="Bar chart: 1982-83 about 246 billion, 1997-98 about 401 billion, 2015-16 about 739 billion dollars.">
+          <line class="gridline" x1="120" y1="40" x2="120" y2="200"/>
+          <!-- bars horizontal; scale 0..800 -> 120..460 (340px) -->
+          <rect x="120" y="56" width="104.6" height="34" rx="5" fill="var(--c-mod)"/><text class="mono" x="234" y="78" fill="#f3d896" font-size="12">$246B</text><text class="mono" x="20" y="78" fill="#94A9C0" font-size="12">1982–83</text>
+          <rect x="120" y="108" width="170.4" height="34" rx="5" fill="var(--c-high)"/><text class="mono" x="300" y="130" fill="#f6c79b" font-size="12">$401B</text><text class="mono" x="20" y="130" fill="#94A9C0" font-size="12">1997–98</text>
+          <rect x="120" y="160" width="314" height="34" rx="5" fill="var(--c-sev)"/><text class="mono" x="300" y="182" fill="#fff" font-size="12">$739B</text><text class="mono" x="20" y="182" fill="#94A9C0" font-size="12">2015–16</text>
+          <text class="mono" x="120" y="222" fill="#6E839B" font-size="10">0</text>
+          <text class="mono" x="290" y="222" fill="#6E839B" font-size="10">~400</text>
+          <text class="mono" x="430" y="222" fill="#6E839B" font-size="10">~700+</text>
+        </svg>
+        <p class="cap" style="margin-top:8px">≈ 1% of global GDP in the event year each time; the strongest events carried a 4-year cumulative toll of up to ~US$3.9T. Longer-run modelling (Science, 2023) puts cumulative 21st-century losses at ~US$84T if ENSO intensifies — with drag persisting up to ~14 years per major event.</p>
+      </figure>
+    </div>
+
+    <h3 style="font-size:21px; margin:36px 0 10px">India loss scenarios — three ways this season can land</h3>
+    <div class="scenarios">
+      <div class="scn base reveal"><div class="tag">Base case · most likely</div><div class="big">Below-normal, manageable</div><ul><li>Monsoon ~90% LPA; deficits concentrated Aug–Sep</li><li>Foodgrain output dips modestly; stocks &amp; the seed war-chest absorb most shock</li><li>Food inflation firms but stays contained; growth shaved slightly</li><li>RONI nuance holds — atmosphere behaves "moderate"</li></ul></div>
+      <div class="scn adv reveal"><div class="tag">Adverse · plausible</div><div class="big">Deficient &amp; patchy</div><ul><li>Monsoon below 90% with prolonged August dry spells</li><li>Rice output down toward the historical ~3.4 mt strong-El-Niño average; pulses/oilseeds stressed</li><li>12–18% foodgrain declines in worst-hit western/central states</li><li>Sharper food inflation; rural demand softens; edible-oil/pulse imports rise</li></ul></div>
+      <div class="scn sev reveal"><div class="tag">Severe · lower-probability tail</div><div class="big">Drought year</div><ul><li>Very-strong atmospheric El Niño + no IOD support → widespread drought</li><li>Major kharif &amp; rabi losses; reservoir &amp; drinking-water stress</li><li>Notable inflation spike, possible export curbs, fiscal support needed</li><li>Echoes of 2002/2009/2015 deficient years</li></ul></div>
+    </div>
+    <p class="cap mono" style="color:var(--mist-dim); margin-top:12px">Scenarios are analytical framings built from IMD probabilities and historical analogues — not point forecasts. The base case is currently the central expectation.</p>
+  </div>
+</section>
+
+<!-- LIFESTYLE -->
+<section id="lifestyle">
+  <div class="wrap">
+    <p class="eyebrow">08 · The common-person playbook</p>
+    <h2 style="font-size:clamp(24px,3.2vw,36px); margin:6px 0 6px">What to actually do at home</h2>
+    <p class="lead" style="max-width:820px">No jargon. Practical, low-cost changes that blunt the impact of a hot, dry, pricier year — useful whether you're in a city flat or on a farm.</p>
+
+    <div class="play" style="margin-top:24px">
+      <div class="pcard reveal"><h4><span class="ic">💧</span>Water</h4><ul>
+        <li><b>Store &amp; harvest.</b> Fix leaks, keep buckets/tanks topped, and harvest rooftop rain during the bursts you do get.</li>
+        <li><b>Cut waste.</b> Shorter showers, full loads only, bucket over hose. Reuse RO reject &amp; kitchen water for plants.</li>
+        <li><b>Watch the supply calendar.</b> Cities may ration in a dry spring 2027 — plan for it.</li>
+      </ul></div>
+
+      <div class="pcard reveal"><h4><span class="ic">⚡</span>Power &amp; cooling</h4><ul>
+        <li><b>Expect higher bills &amp; load.</b> Heat + pumping strain the grid. Service fans/ACs now; set ACs to ~26–27°C.</li>
+        <li><b>Passive cooling.</b> Cross-ventilate at night, shade windows, light roofs/curtains.</li>
+        <li><b>Backup ready.</b> Keep inverters charged and a power-cut plan for heatwave days.</li>
+      </ul></div>
+
+      <div class="pcard reveal"><h4><span class="ic">🛒</span>Food budget</h4><ul>
+        <li><b>Pulses, edible oil, sugar &amp; veg</b> are the items most likely to climb — buy non-perishables sensibly, not in panic.</li>
+        <li><b>Lean into millets.</b> Bajra, jowar, ragi are nutritious, cheaper-trending and climate-smart — and you'll be supporting the resilient crops.</li>
+        <li><b>Reduce waste.</b> A drier year makes every kilo count.</li>
+      </ul></div>
+
+      <div class="pcard reveal"><h4><span class="ic">🩺</span>Health</h4><ul>
+        <li><b>Heat.</b> Hydrate, avoid midday sun, check on elderly/children/outdoor workers during heatwave alerts.</li>
+        <li><b>Disease.</b> Erratic rain breeds mosquitoes — clear standing water; guard against dengue/malaria.</li>
+        <li><b>Water safety.</b> Lower flows can mean poorer quality — boil/filter if unsure.</li>
+      </ul></div>
+
+      <div class="pcard reveal"><h4><span class="ic">🌾</span>If you farm</h4><ul>
+        <li><b>Shorten &amp; diversify.</b> Pick short-duration, drought-tolerant varieties; intercrop so one failure isn't total.</li>
+        <li><b>Save every drop.</b> Mulch, drip, direct-seeded rice; level fields; recharge wells.</li>
+        <li><b>Insure &amp; access schemes.</b> Enrol in crop insurance (PMFBY) and tap the government's contingency seed stock for re-sowing.</li>
+        <li><b>Watch the August window.</b> Keep re-sow seed ready in case of a mid-season dry break.</li>
+      </ul></div>
+
+      <div class="pcard reveal"><h4><span class="ic">💼</span>Money &amp; planning</h4><ul>
+        <li><b>Budget for a pricier year</b> in food &amp; utilities; build a small buffer.</li>
+        <li><b>Rural earners:</b> know your MGNREGA work-day rights as a fallback if farm income dips.</li>
+        <li><b>Small businesses:</b> map your exposure to drought-hit suppliers and diversify sourcing early.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIONS -->
+<section id="actions">
+  <div class="wrap">
+    <p class="eyebrow">09 · Recommendations by stakeholder</p>
+    <h2 style="font-size:clamp(24px,3.2vw,36px); margin:6px 0 6px">Who should do what, now</h2>
+    <div class="recs" style="margin-top:22px">
+      <div class="rec reveal"><h4>Government &amp; policy</h4><ol><li>Pre-position contingency seed &amp; fodder; ready re-sowing plans</li><li>Stress-test reservoirs, drinking-water &amp; power supply for a hot 2027 spring</li><li>Tune buffer-stock releases &amp; import calendars for pulses/edible oils</li><li>Scale heat-action plans &amp; MGNREGA capacity in vulnerable districts</li></ol></div>
+      <div class="rec reveal"><h4>Agribusiness</h4><ol><li>Map supplier exposure to high-risk crop×region cells (Section 06)</li><li>Diversify sourcing; lock contracts before price moves</li><li>Push drought-tolerant seed &amp; drip to your grower network</li><li>Model an adverse-scenario margin hit</li></ol></div>
+      <div class="rec reveal"><h4>Corporates &amp; investors</h4><ol><li>Put El Niño in enterprise risk registers — flood, heat, drought, water, input scarcity</li><li>Identify single-source suppliers in drought-prone zones</li><li>Watch food-inflation-sensitive sectors (FMCG, QSR, rural-demand plays)</li><li>Revisit insurance &amp; hedging for weather-exposed P&amp;L</li></ol></div>
+      <div class="rec reveal"><h4>Households &amp; communities</h4><ol><li>Adopt the water, power &amp; food steps in Section 08</li><li>Build a modest price buffer; cut waste</li><li>Look out for heat-vulnerable neighbours</li><li>Stay tuned to IMD updates through the season</li></ol></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY & SOURCES -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">10 · Methodology, confidence &amp; sources</p>
+    <h2 style="font-size:clamp(22px,2.8vw,30px); margin:6px 0 12px">How this was built — and what to trust</h2>
+    <div class="cols2 wide">
+      <div>
+        <p><b>Confidence.</b> The <b>existence</b> of El Niño and its <b>seasonal arc</b> are high-confidence (agreed across NOAA, WMO, IRI). The <b>magnitude</b> of impact is medium-confidence: forecasts just cleared the spring predictability barrier, the IOD is neutral (so no strong cushion), and the RONI-vs-traditional-index gap means the atmosphere could behave milder than the ocean suggests.</p>
+        <p><b>Method.</b> Current ENSO state and forecasts are taken from official agency bulletins; India's monsoon outlook from IMD's stage-two forecast; crop and regional vulnerability from peer-reviewed ENSO–yield studies and CRIDA-type analyses; loss figures from published economic literature. Crop×region cells and loss scenarios are <b>analytical syntheses</b> — directional guidance, not field-level or point forecasts.</p>
+        <p><b>Limits.</b> Every El Niño is unique; local outcomes vary with terrain, irrigation and timing. Some secondary sources (think-tank/industry notes) are weighted below the agency and peer-reviewed material. Re-check IMD/NOAA monthly updates as the season unfolds.</p>
+      </div>
+      <div class="src">
+        <p style="font-family:'Space Grotesk',sans-serif;font-weight:500;color:var(--paper);margin-bottom:6px">Key sources</p>
+        <ol>
+          <li>NOAA CPC — El Niño Advisory &amp; ENSO Diagnostic Discussion (Jun 2026)</li>
+          <li>IRI (Columbia) — ENSO Quick Look / multi-model forecast (Jun 2026)</li>
+          <li>WMO — El Niño/La Niña Update (May 2026)</li>
+          <li>IMD — 2026 Southwest Monsoon long-range forecast, revised to ~90% LPA (29 May 2026)</li>
+          <li>Down To Earth; Business Standard; Business Today — IMD forecast &amp; kharif coverage (2026)</li>
+          <li>Peer-reviewed ENSO × kharif-crop / agro-climatic-zone yield studies; CRIDA vulnerability data</li>
+          <li>Nature Communications (2023) — event-year El Niño economic losses; Science (2023, Callahan &amp; Mankin) — persistent &amp; cumulative GDP effects</li>
+          <li>World Economic Forum; World Resources Institute; ORF Middle East — systemic-risk &amp; supply-chain analyses (2026)</li>
+          <li>Climate Impact Company — RONI vs traditional-index nuance (Jun 2026)</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    El Niño 2026–27 · Climate &amp; Agro-Economic Intelligence Report · prepared 26 Jun 2026 · figures are central estimates with wide uncertainty bands · this is decision-support analysis, not investment, agronomic, or medical advice — verify against live IMD/NOAA bulletins and qualified local advisors before acting.
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(rm) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  })();
+</script>
+</body>
+</html>
